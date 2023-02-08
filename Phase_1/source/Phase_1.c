@@ -57,7 +57,7 @@ int main(void) {
 	init_LED();
 
 	PTB->PSOR |= (1 << MCU_SIGNAL); // Set MCU_SIGNAL to high
-	PTB->PSOR |= (1 << LED);
+	PTB->PSOR |= (1 << LED); // Turn off LED
 
 	fpga_reset();
 
