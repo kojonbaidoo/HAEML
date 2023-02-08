@@ -1,0 +1,26 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Phase_1_fpga.srcs/sources_1/new/configuration_pack.vhd" \
+"../../../../Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd" \
+"../../../../Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd" \
+"../../../../Phase_1_fpga.srcs/sources_1/new/MMSU_5.vhd" \
+"../../../../Phase_1_fpga.srcs/sources_1/new/PRNG_8_bit.vhd" \
+"../../../../Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd" \
+"../../../../Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd" \
+"../../../../Phase_1_fpga.srcs/sources_1/new/VMU_5.vhd" \
+"../../../../Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd" \
+"../../../../Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd" \
+"../../../../Phase_1_fpga.srcs/sources_1/new/VRELU_6.vhd" \
+"../../../../Phase_1_fpga.srcs/sources_1/new/binto7seg.vhd" \
+"../../../../Phase_1_fpga.srcs/sources_1/new/clockdelay.vhd" \
+"../../../../Phase_1_fpga.srcs/sources_1/new/communication_module.vhd" \
+"../../../../Phase_1_fpga.srcs/sources_1/new/fourtosixteendecoder.vhd" \
+"../../../../Phase_1_fpga.srcs/sources_1/new/main.vhd" \
+"../../../../Phase_1_fpga.srcs/sources_1/new/output_comparator.vhd" \
+"../../../../Phase_1_fpga.srcs/sources_1/new/relu.vhd" \
+"../../../../Phase_1_fpga.srcs/sources_1/new/rounding_bits_generator.vhd" \
+"../../../../Phase_1_fpga.srcs/sources_1/new/weight_store.vhd" \
+"../../../../Phase_1_fpga.srcs/sim_1/new/main_test.vhd" \
+
+# Do not sort compile order
+nosort
