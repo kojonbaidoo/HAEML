@@ -4,4 +4,42 @@ Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto b90d65cf04
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package xil_defaultlib.configuration_pack
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package unimacro.vcomponents
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture rtl of entity xil_defaultlib.communication_module [communication_module_default]
+Compiling architecture behavioral of entity xil_defaultlib.weight_store [weight_store_default]
+Compiling architecture behavioral of entity xil_defaultlib.PRNG_8_bit [prng_8_bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.rounding_bits_generator [rounding_bits_generator_default]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,areg=0,bcasc...]
+Compiling architecture macc of entity unimacro.MACC_MACRO [\MACC_MACRO(device="7SERIES",lat...]
+Compiling architecture behavioral of entity xil_defaultlib.VMU_1 [vmu_1_default]
+Compiling architecture behavioral of entity xil_defaultlib.MMSU_1 [mmsu_1_default]
+Compiling architecture behavioral of entity xil_defaultlib.relu [relu_default]
+Compiling architecture behavioral of entity xil_defaultlib.VRELU_2 [vrelu_2_default]
+Compiling architecture behavioral of entity xil_defaultlib.VMU_3 [vmu_3_default]
+Compiling architecture behavioral of entity xil_defaultlib.MMSU_3 [mmsu_3_default]
+Compiling architecture behavioral of entity xil_defaultlib.VRELU_4 [vrelu_4_default]
+Compiling architecture behavioral of entity xil_defaultlib.VMU_5 [vmu_5_default]
+Compiling architecture behavioral of entity xil_defaultlib.MMSU_5 [mmsu_5_default]
+Compiling architecture behavioral of entity xil_defaultlib.VRELU_6 [vrelu_6_default]
+Compiling architecture behavioral of entity xil_defaultlib.output_comparator [output_comparator_default]
+Compiling architecture behavioral of entity xil_defaultlib.fourtosixteendecoder [fourtosixteendecoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.binto7seg [binto7seg_default]
+Compiling architecture behavioral of entity xil_defaultlib.clockdelay [clockdelay_default]
+Compiling architecture behavioral of entity xil_defaultlib.main [main_default]
+Compiling architecture behavioral of entity xil_defaultlib.main_test
+Built simulation snapshot main_test_behav

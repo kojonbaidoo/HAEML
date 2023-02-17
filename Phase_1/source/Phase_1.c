@@ -35,6 +35,8 @@ void init_mcu_to_fpga();
 void init_fpga_to_mcu();
 void init_interrupt();
 void init_LED();
+void init_TPM();
+void TPM0_IRQHandler()
 
 void delay_ms(uint16_t delay);
 void delay_us(uint16_t delay);
@@ -46,6 +48,7 @@ uint8_t spi_read_write(uint8_t value);
 uint8_t processing = 0;// 0 - Ready to write to FPGA; 1 - Inference is occurring; 2 - Inference result is ready
 uint8_t nn_result = 0;
 uint8_t waiting = 0; //1 - Waiting for interrupt; 0 - Not waiting for interrupt
+uint16_t ms_count = 0;
 
 int main(void) {
 	__disable_irq();
@@ -92,13 +95,14 @@ uint8_t fpga_read(){
 }
 
 void fpga_write_byte(uint8_t value){
+	waiting = 1;
 	PTB->PCOR |= (1 << MCU_SIGNAL); // Set MCU_SIGNAL to low
 	PTC->PDOR &= 0xFFFFFF00; // Clear data bits
 	PTC->PDOR |= (value); // Set data bits to input value
 	PTB->PSOR |= (1 << MCU_SIGNAL); // Set MCU_SIGNAL to high
 	PTB->PCOR |= (1 << LED);
 //	while(!(PTB->PDIR & (1 << FPGA_SIGNAL))); //Wait until FPGA_SIGNAL goes high
-	while(!(PTD->PDIR & (1 << FPGA_SIGNAL))); //Wait until FPGA_SIGNAL goes high
+	while(waiting);
 	PTB->PSOR |= (1 << LED);
 }
 
@@ -221,6 +225,27 @@ void init_interrupt(){
 	NVIC_SetPriority(PORTD_IRQn,2);
 	NVIC_ClearPendingIRQ(PORTD_IRQn);
 	NVIC_EnableIRQ(PORTD_IRQn);
+}
+
+void init_TPM(){
+	// Clock gating for TPM1
+	SIM->SCGC6 |= SIM_SCGC6_TPM0_MASK;
+
+	// Setting clock source FOR TPM
+	SIM->SOPT2 |= SIM_SOPT2_TPMSRC(1) | SIM_SOPT2_PLLFLLSEL_MASK;
+	TPM0->MOD = 374;
+
+	TPM0->SC = TPM0_SC_CMOD(1) | TPM_SC_PS(7) | TPM_SC_TOIE_MASK;
+
+	NVIC_SetPriority(TPM0_IRQn,3);
+	NVIC_ClearPendingIRQ(TPM0_IRQn);
+	NVIC_EnableIRQ(TPM0_IRQn);
+
+}
+
+void TPM0_IRQHandler(){
+	ms_count++;
+	TPM0->STATUS |= TPM_STATUS_TOF_MASK;
 }
 
 void delay_ms(uint16_t delay){

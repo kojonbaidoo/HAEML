@@ -1,0 +1,41 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/configuration_pack.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MMSU_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MMSU_3'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_5.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MMSU_5'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/PRNG_8_bit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PRNG_8_bit'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'VMU_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'VMU_3'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_5.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'VMU_5'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'VRELU_2'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'VRELU_4'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_6.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'VRELU_6'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/binto7seg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'binto7seg'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/clockdelay.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clockdelay'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'communication_module'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/fourtosixteendecoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fourtosixteendecoder'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'main'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/output_comparator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'output_comparator'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'relu'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/rounding_bits_generator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'rounding_bits_generator'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/weight_store.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'weight_store'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sim_1/new/main_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'main_test'
