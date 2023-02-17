@@ -36,7 +36,7 @@ void init_fpga_to_mcu();
 void init_interrupt();
 void init_LED();
 void init_TPM();
-void TPM0_IRQHandler()
+void TPM0_IRQHandler();
 
 void delay_ms(uint16_t delay);
 void delay_us(uint16_t delay);
