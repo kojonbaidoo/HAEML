@@ -70,7 +70,7 @@ begin
     --Write byte 1
     mcu_signal_signal <= '0';
     wait for 5ps;
-    mcu_data_signal <= "00000000";
+    mcu_data_signal <= "00000001";
     mcu_signal_signal <= '1';
     wait for 5ps;
 
@@ -83,7 +83,7 @@ begin
     --Write byte 2
     mcu_signal_signal <= '0';
     wait for 5ps;
-    mcu_data_signal <= "00000000";
+    mcu_data_signal <= "00000010";
     mcu_signal_signal <= '1';
     wait for 5ps;
 
@@ -96,7 +96,7 @@ begin
     --Write byte 3
     mcu_signal_signal <= '0';
     wait for 5ps;
-    mcu_data_signal <= "00000000";
+    mcu_data_signal <= "00000011";
     mcu_signal_signal <= '1';
     wait for 5ps;
 

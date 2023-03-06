@@ -35,12 +35,12 @@ void init_mcu_to_fpga();
 void init_fpga_to_mcu();
 void init_interrupt();
 void init_LED();
-void init_TPM();
-void TPM0_IRQHandler();
+//void init_TPM();
+//void TPM0_IRQHandler();
 
 void delay_ms(uint16_t delay);
 void delay_us(uint16_t delay);
-void flash_LED(uint8_t delay);
+void flash_LED(uint16_t delay);
 
 void spi_init();
 uint8_t spi_read_write(uint8_t value);
@@ -51,32 +51,33 @@ uint8_t waiting = 0; //1 - Waiting for interrupt; 0 - Not waiting for interrupt
 uint16_t ms_count = 0;
 
 int main(void) {
+
 	__disable_irq();
+
 	init_signal_pins();
 	init_mcu_to_fpga();
 	init_fpga_to_mcu();
 
 	init_interrupt();
+	__enable_irq();
+
 	init_LED();
 
 	PTB->PSOR |= (1 << MCU_SIGNAL); // Set MCU_SIGNAL to high
-	PTB->PSOR |= (1 << LED); // Turn off LED
+	PTB->PCOR |= (1 << LED); // Turn off LED
 
-	fpga_reset();
-
-	__enable_irq();
+//	fpga_reset();
 	while(1){
 		if(processing == 0){
-			fpga_write(3);
-			fpga_write(1);
-			fpga_write(2);
+			fpga_write(0);
+			fpga_write(0);
+			fpga_write(0);
 			processing = 1;
-			flash_LED(200);
+
 		}
 
 		else if(processing == 2){
 			nn_result = fpga_read();
-//			flash_LED(200);
 			processing = 0;
 		}
 	}
@@ -108,7 +109,9 @@ void fpga_write_byte(uint8_t value){
 
 void fpga_write(uint16_t value){
 	fpga_write_byte(value);
+	delay_ms(1000);
 	fpga_write_byte(value >> 8);
+	delay_ms(1000);
 }
 
 void fpga_reset(){
@@ -116,20 +119,35 @@ void fpga_reset(){
 	delay_ms(2);
 	PTB->PSOR |= (1 << MCU_READY); // Set MCU_SIGNAL to high
 //	while(!(PTB->PDIR & (1 << FPGA_SIGNAL))); //Wait until FPGA_SIGNAL goes high
-	while(!(PTD->PDIR & (1 << FPGA_SIGNAL))); //Wait until FPGA_SIGNAL goes high
+//	while(!(PTD->PDIR & (1 << FPGA_SIGNAL))); //Wait until FPGA_SIGNAL goes high
 }
 
-void PortD_IRQHandler(void){
-	if(processing == 1){
-		processing = 2;
+void PORTD_IRQHandler(void){
+
+	PTB->PTOR |= (1 << LED); // Toggle LED
+	delay_ms(500);
+	PTB->PTOR |= (1 << LED); // Toggle LED
+
+	if(PORTD->ISFR & (1 << FPGA_SIGNAL)){
+		PORTD->ISFR |= (1 << FPGA_SIGNAL);
+
 	}
 
-	// Check if code is waiting for an interrupt
-	if(waiting){
-		waiting = 0;
+	if(PORTD->ISFR & (1 << FPGA_READY)){
+		PORTD->ISFR |= (1 << FPGA_READY);
 	}
-	// Clear IRQ flags
-	PORTD->ISFR = 0xFFFFFFFF;
+
+//	if(processing == 1){
+//		processing = 2;
+//	}
+//
+//	// Check if code is waiting for an interrupt
+//	if(waiting){
+//		waiting = 0;
+//	}
+//	// Clear IRQ flags
+//	PORTD->ISFR = 0xFFFFFFFF;
+//	NVIC_ClearPendingIRQ(PORTD_IRQn);
 }
 
 void init_signal_pins(){
@@ -219,33 +237,44 @@ void init_fpga_to_mcu(){
 
 void init_interrupt(){
 	SIM->SCGC5 |= SIM_SCGC5_PORTD_MASK;
-	PORTD->PCR[FPGA_READY] = PORT_PCR_MUX_MASK | PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_IRQC(9);
-	PORTD->PCR[FPGA_SIGNAL] = PORT_PCR_MUX_MASK | PORT_PCR_PS_MASK | PORT_PCR_PE_MASK | PORT_PCR_IRQC(9);
 
-	NVIC_SetPriority(PORTD_IRQn,2);
+	PORTD->PCR[FPGA_READY] &= ~PORT_PCR_MUX_MASK;
+	PORTD->PCR[FPGA_READY] |= PORT_PCR_MUX(1) | PORT_PCR_IRQC(9);// | PORT_PCR_PE_MASK | PORT_PCR_PS_MASK;
+
+	PORTD->PCR[FPGA_SIGNAL] &= ~PORT_PCR_MUX_MASK;
+	PORTD->PCR[FPGA_SIGNAL] |= PORT_PCR_MUX(1) | PORT_PCR_IRQC(9);// | PORT_PCR_PE_MASK | PORT_PCR_PS_MASK;
+
+//	NVIC_SetPriority(PORTD_IRQn,2);
 	NVIC_ClearPendingIRQ(PORTD_IRQn);
 	NVIC_EnableIRQ(PORTD_IRQn);
 }
 
-void init_TPM(){
-	// Clock gating for TPM1
-	SIM->SCGC6 |= SIM_SCGC6_TPM0_MASK;
+//void init_TPM(){
+//	// Clock gating for TPM1
+//	SIM->SCGC6 |= SIM_SCGC6_TPM0_MASK;
+//
+//	// Setting clock source FOR TPM
+//	SIM->SOPT2 |= SIM_SOPT2_TPMSRC(1) | SIM_SOPT2_PLLFLLSEL_MASK;
+//	TPM0->MOD = 374;
+//
+//	TPM0->SC = TPM0_SC_CMOD(1) | TPM_SC_PS(7) | TPM_SC_TOIE_MASK;
+//
+//	NVIC_SetPriority(TPM0_IRQn,3);
+//	NVIC_ClearPendingIRQ(TPM0_IRQn);
+//	NVIC_EnableIRQ(TPM0_IRQn);
+//
+//}
+//
+//void TPM0_IRQHandler(){
+//	ms_count++;
+//	TPM0->STATUS |= TPM_STATUS_TOF_MASK;
+//}
 
-	// Setting clock source FOR TPM
-	SIM->SOPT2 |= SIM_SOPT2_TPMSRC(1) | SIM_SOPT2_PLLFLLSEL_MASK;
-	TPM0->MOD = 374;
-
-	TPM0->SC = TPM0_SC_CMOD(1) | TPM_SC_PS(7) | TPM_SC_TOIE_MASK;
-
-	NVIC_SetPriority(TPM0_IRQn,3);
-	NVIC_ClearPendingIRQ(TPM0_IRQn);
-	NVIC_EnableIRQ(TPM0_IRQn);
-
-}
-
-void TPM0_IRQHandler(){
-	ms_count++;
-	TPM0->STATUS |= TPM_STATUS_TOF_MASK;
+void flash_LED(uint16_t delay){
+	PTB->PCOR |= (1 << LED);
+	delay_ms(delay/2);
+	PTB->PSOR |= (1 << LED);
+	delay_ms(delay/2);
 }
 
 void delay_ms(uint16_t delay){
@@ -260,10 +289,4 @@ void delay_us(uint16_t delay){
   for(uint32_t i = 0; i<iter; i++){
     __asm volatile("nop"); //Takes one clock cycle. 1 clock cycle at 20.9MHz is 47.8ns
   }
-}
-
-void flash_LED(uint8_t delay){
-	PTB->PCOR |= (1 << LED);
-	delay_ms(delay);
-	PTB->PSOR |= (1 << LED);
 }

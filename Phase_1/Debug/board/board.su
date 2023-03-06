@@ -1,2 +1,2 @@
-C:\Users\Kojo\OneDrive\Ashesi\Capstone\Implementation\Phase_1\Phase_1\drivers/fsl_clock.h:620:20:CLOCK_SetLpsci0Clock	16	static
+C:\Users\Kojo\OneDrive\Ashesi\Capstone\Implementation\HAEML\Phase_1\drivers/fsl_clock.h:620:20:CLOCK_SetLpsci0Clock	16	static
 ../board/board.c:44:6:BOARD_InitDebugConsole	16	static
