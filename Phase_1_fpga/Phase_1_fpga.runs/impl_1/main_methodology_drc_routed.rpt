@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Mon Feb  6 08:56:22 2023
+| Date         : Wed Mar 22 12:52:08 2023
 | Host         : DESKTOP-T7NU7VJ running 64-bit major release  (build 9200)
 | Command      : report_methodology -file main_methodology_drc_routed.rpt -pb main_methodology_drc_routed.pb -rpx main_methodology_drc_routed.rpx
 | Design       : main
@@ -23,30 +23,29 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 1070
+             Violations found: 1005
 +-----------+----------+------------------------------+------------+
 | Rule      | Severity | Description                  | Violations |
 +-----------+----------+------------------------------+------------+
-| LUTAR-1   | Warning  | LUT drives async reset alert | 7          |
+| LUTAR-1   | Warning  | LUT drives async reset alert | 5          |
 | TIMING-17 | Warning  | Non-clocked sequential cell  | 1000       |
-| TIMING-20 | Warning  | Non-clocked latch            | 63         |
 +-----------+----------+------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell LAYER_MMSU_1/single_vector_multiplier_generate[6].vector_multiply/start[0]_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) LAYER_VRELU_2/single_relu_generate[0].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[10].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[11].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[12].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[13].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[14].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[15].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[1].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[2].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[3].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[4].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[5].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[6].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[7].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[8].scalar_relu/done_reg/CLR (the first 15 of 17 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell LAYER_MMSU_1/single_vector_multiplier_generate[6].vector_multiply/start[0]_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) LAYER_VRELU_2/single_relu_generate[9].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[9].scalar_relu/start_reg[0]/CLR, LAYER_VRELU_2/single_relu_generate[0].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[10].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[11].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[12].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[13].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[14].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[15].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[1].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[2].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[3].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[4].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[5].scalar_relu/done_reg/CLR, LAYER_VRELU_2/single_relu_generate[6].scalar_relu/done_reg/CLR (the first 15 of 17 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#2 Warning
 LUT drives async reset alert  
-LUT cell LAYER_MMSU_3//result[15]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) LAYER_VRELU_4/single_relu_generate[0].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[0].scalar_relu/start_reg[0]/CLR, LAYER_VRELU_4/single_relu_generate[3].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[10].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[11].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[12].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[13].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[14].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[1].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[4].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[5].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[7].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[8].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[9].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[15].scalar_relu/done_reg/CLR (the first 15 of 17 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell LAYER_MMSU_3//result[15]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) LAYER_VRELU_4/single_relu_generate[0].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[10].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[11].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[11].scalar_relu/start_reg[0]/CLR, LAYER_VRELU_4/single_relu_generate[12].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[13].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[14].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[15].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[1].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[2].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[3].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[4].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[5].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[6].scalar_relu/done_reg/CLR, LAYER_VRELU_4/single_relu_generate[7].scalar_relu/done_reg/CLR (the first 15 of 17 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#3 Warning
 LUT drives async reset alert  
-LUT cell LAYER_MMSU_5/single_vector_multiplier_generate[2].vector_multiply/start[0]_i_1__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) LAYER_VRELU_6/single_relu_generate[0].scalar_relu/done_reg/CLR, LAYER_VRELU_6/single_relu_generate[0].scalar_relu/start_reg[0]/CLR, LAYER_VRELU_6/single_relu_generate[1].scalar_relu/done_reg/CLR, LAYER_VRELU_6/single_relu_generate[2].scalar_relu/done_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell LAYER_MMSU_5/single_vector_multiplier_generate[1].vector_multiply/start[0]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) LAYER_VRELU_6/single_relu_generate[0].scalar_relu/done_reg/CLR, LAYER_VRELU_6/single_relu_generate[0].scalar_relu/start_reg[0]/CLR, LAYER_VRELU_6/single_relu_generate[1].scalar_relu/done_reg/CLR, LAYER_VRELU_6/single_relu_generate[2].scalar_relu/done_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#4 Warning
@@ -56,17 +55,7 @@ Related violations: <none>
 
 LUTAR-1#5 Warning
 LUT drives async reset alert  
-LUT cell LAYER_VRELU_4/single_relu_generate[10].scalar_relu/result_buffer_temp[47]_i_3__16, with 2 or more inputs, drives asynchronous preset/clear pin(s) LAYER_MMSU_5/single_vector_multiplier_generate[0].vector_multiply/start_reg/CLR, LAYER_MMSU_5/single_vector_multiplier_generate[0].vector_multiply/dsp_enable_reg/PRE, LAYER_MMSU_5/single_vector_multiplier_generate[0].vector_multiply/dsp_reset_reg/PRE, LAYER_MMSU_5/single_vector_multiplier_generate[1].vector_multiply/dsp_enable_reg/PRE, LAYER_MMSU_5/single_vector_multiplier_generate[1].vector_multiply/dsp_reset_reg/PRE, LAYER_MMSU_5/single_vector_multiplier_generate[2].vector_multiply/dsp_enable_reg/PRE, LAYER_MMSU_5/single_vector_multiplier_generate[2].vector_multiply/dsp_reset_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#6 Warning
-LUT drives async reset alert  
-LUT cell LAYER_VRELU_6/done, with 2 or more inputs, drives asynchronous preset/clear pin(s) comms/fpga_ready_signal_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#7 Warning
-LUT drives async reset alert  
-LUT cell comms/fpga_signal_next_reg_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) comms/count_reg[0]/CLR, comms/count_reg[1]/CLR, comms/count_reg[2]/CLR, comms/input_1_data_reg[0]/CLR, comms/input_1_data_reg[10]/CLR, comms/input_1_data_reg[11]/CLR, comms/input_1_data_reg[12]/CLR, comms/input_1_data_reg[13]/CLR, comms/input_1_data_reg[14]/CLR, comms/input_1_data_reg[15]/CLR, comms/input_1_data_reg[1]/CLR, comms/input_1_data_reg[2]/CLR, comms/input_1_data_reg[3]/CLR, comms/input_1_data_reg[4]/CLR, comms/input_1_data_reg[5]/CLR (the first 15 of 52 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell LAYER_VRELU_4/single_relu_generate[2].scalar_relu/start_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) LAYER_MMSU_5/single_vector_multiplier_generate[0].vector_multiply/start_reg/CLR, LAYER_MMSU_5/single_vector_multiplier_generate[0].vector_multiply/dsp_enable_reg/PRE, LAYER_MMSU_5/single_vector_multiplier_generate[0].vector_multiply/dsp_reset_reg/PRE, LAYER_MMSU_5/single_vector_multiplier_generate[1].vector_multiply/dsp_enable_reg/PRE, LAYER_MMSU_5/single_vector_multiplier_generate[1].vector_multiply/dsp_reset_reg/PRE, LAYER_MMSU_5/single_vector_multiplier_generate[2].vector_multiply/dsp_enable_reg/PRE, LAYER_MMSU_5/single_vector_multiplier_generate[2].vector_multiply/dsp_reset_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 TIMING-17#1 Warning
@@ -5067,321 +5056,6 @@ Related violations: <none>
 TIMING-17#1000 Warning
 Non-clocked sequential cell  
 The clock pin LAYER_MMSU_1/single_vector_multiplier_generate[2].vector_multiply/result_buffer_temp_reg[20]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#1 Warning
-Non-clocked latch  
-The latch comms/count_reg[0] cannot be properly analyzed as its control pin comms/count_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#2 Warning
-Non-clocked latch  
-The latch comms/count_reg[1] cannot be properly analyzed as its control pin comms/count_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#3 Warning
-Non-clocked latch  
-The latch comms/count_reg[2] cannot be properly analyzed as its control pin comms/count_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#4 Warning
-Non-clocked latch  
-The latch comms/fpga_data_reg[0] cannot be properly analyzed as its control pin comms/fpga_data_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#5 Warning
-Non-clocked latch  
-The latch comms/fpga_data_reg[1] cannot be properly analyzed as its control pin comms/fpga_data_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#6 Warning
-Non-clocked latch  
-The latch comms/fpga_ready_signal_reg cannot be properly analyzed as its control pin comms/fpga_ready_signal_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#7 Warning
-Non-clocked latch  
-The latch comms/fpga_signal_next_reg cannot be properly analyzed as its control pin comms/fpga_signal_next_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#8 Warning
-Non-clocked latch  
-The latch comms/input_1_data_reg[0] cannot be properly analyzed as its control pin comms/input_1_data_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#9 Warning
-Non-clocked latch  
-The latch comms/input_1_data_reg[10] cannot be properly analyzed as its control pin comms/input_1_data_reg[10]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#10 Warning
-Non-clocked latch  
-The latch comms/input_1_data_reg[11] cannot be properly analyzed as its control pin comms/input_1_data_reg[11]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#11 Warning
-Non-clocked latch  
-The latch comms/input_1_data_reg[12] cannot be properly analyzed as its control pin comms/input_1_data_reg[12]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#12 Warning
-Non-clocked latch  
-The latch comms/input_1_data_reg[13] cannot be properly analyzed as its control pin comms/input_1_data_reg[13]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#13 Warning
-Non-clocked latch  
-The latch comms/input_1_data_reg[14] cannot be properly analyzed as its control pin comms/input_1_data_reg[14]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#14 Warning
-Non-clocked latch  
-The latch comms/input_1_data_reg[15] cannot be properly analyzed as its control pin comms/input_1_data_reg[15]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#15 Warning
-Non-clocked latch  
-The latch comms/input_1_data_reg[1] cannot be properly analyzed as its control pin comms/input_1_data_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#16 Warning
-Non-clocked latch  
-The latch comms/input_1_data_reg[2] cannot be properly analyzed as its control pin comms/input_1_data_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#17 Warning
-Non-clocked latch  
-The latch comms/input_1_data_reg[3] cannot be properly analyzed as its control pin comms/input_1_data_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#18 Warning
-Non-clocked latch  
-The latch comms/input_1_data_reg[4] cannot be properly analyzed as its control pin comms/input_1_data_reg[4]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#19 Warning
-Non-clocked latch  
-The latch comms/input_1_data_reg[5] cannot be properly analyzed as its control pin comms/input_1_data_reg[5]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#20 Warning
-Non-clocked latch  
-The latch comms/input_1_data_reg[6] cannot be properly analyzed as its control pin comms/input_1_data_reg[6]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#21 Warning
-Non-clocked latch  
-The latch comms/input_1_data_reg[7] cannot be properly analyzed as its control pin comms/input_1_data_reg[7]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#22 Warning
-Non-clocked latch  
-The latch comms/input_1_data_reg[8] cannot be properly analyzed as its control pin comms/input_1_data_reg[8]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#23 Warning
-Non-clocked latch  
-The latch comms/input_1_data_reg[9] cannot be properly analyzed as its control pin comms/input_1_data_reg[9]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#24 Warning
-Non-clocked latch  
-The latch comms/input_2_data_reg[0] cannot be properly analyzed as its control pin comms/input_2_data_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#25 Warning
-Non-clocked latch  
-The latch comms/input_2_data_reg[10] cannot be properly analyzed as its control pin comms/input_2_data_reg[10]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#26 Warning
-Non-clocked latch  
-The latch comms/input_2_data_reg[11] cannot be properly analyzed as its control pin comms/input_2_data_reg[11]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#27 Warning
-Non-clocked latch  
-The latch comms/input_2_data_reg[12] cannot be properly analyzed as its control pin comms/input_2_data_reg[12]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#28 Warning
-Non-clocked latch  
-The latch comms/input_2_data_reg[13] cannot be properly analyzed as its control pin comms/input_2_data_reg[13]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#29 Warning
-Non-clocked latch  
-The latch comms/input_2_data_reg[14] cannot be properly analyzed as its control pin comms/input_2_data_reg[14]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#30 Warning
-Non-clocked latch  
-The latch comms/input_2_data_reg[15] cannot be properly analyzed as its control pin comms/input_2_data_reg[15]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#31 Warning
-Non-clocked latch  
-The latch comms/input_2_data_reg[1] cannot be properly analyzed as its control pin comms/input_2_data_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#32 Warning
-Non-clocked latch  
-The latch comms/input_2_data_reg[2] cannot be properly analyzed as its control pin comms/input_2_data_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#33 Warning
-Non-clocked latch  
-The latch comms/input_2_data_reg[3] cannot be properly analyzed as its control pin comms/input_2_data_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#34 Warning
-Non-clocked latch  
-The latch comms/input_2_data_reg[4] cannot be properly analyzed as its control pin comms/input_2_data_reg[4]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#35 Warning
-Non-clocked latch  
-The latch comms/input_2_data_reg[5] cannot be properly analyzed as its control pin comms/input_2_data_reg[5]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#36 Warning
-Non-clocked latch  
-The latch comms/input_2_data_reg[6] cannot be properly analyzed as its control pin comms/input_2_data_reg[6]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#37 Warning
-Non-clocked latch  
-The latch comms/input_2_data_reg[7] cannot be properly analyzed as its control pin comms/input_2_data_reg[7]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#38 Warning
-Non-clocked latch  
-The latch comms/input_2_data_reg[8] cannot be properly analyzed as its control pin comms/input_2_data_reg[8]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#39 Warning
-Non-clocked latch  
-The latch comms/input_2_data_reg[9] cannot be properly analyzed as its control pin comms/input_2_data_reg[9]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#40 Warning
-Non-clocked latch  
-The latch comms/input_3_data_reg[0] cannot be properly analyzed as its control pin comms/input_3_data_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#41 Warning
-Non-clocked latch  
-The latch comms/input_3_data_reg[10] cannot be properly analyzed as its control pin comms/input_3_data_reg[10]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#42 Warning
-Non-clocked latch  
-The latch comms/input_3_data_reg[11] cannot be properly analyzed as its control pin comms/input_3_data_reg[11]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#43 Warning
-Non-clocked latch  
-The latch comms/input_3_data_reg[12] cannot be properly analyzed as its control pin comms/input_3_data_reg[12]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#44 Warning
-Non-clocked latch  
-The latch comms/input_3_data_reg[13] cannot be properly analyzed as its control pin comms/input_3_data_reg[13]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#45 Warning
-Non-clocked latch  
-The latch comms/input_3_data_reg[14] cannot be properly analyzed as its control pin comms/input_3_data_reg[14]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#46 Warning
-Non-clocked latch  
-The latch comms/input_3_data_reg[15] cannot be properly analyzed as its control pin comms/input_3_data_reg[15]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#47 Warning
-Non-clocked latch  
-The latch comms/input_3_data_reg[1] cannot be properly analyzed as its control pin comms/input_3_data_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#48 Warning
-Non-clocked latch  
-The latch comms/input_3_data_reg[2] cannot be properly analyzed as its control pin comms/input_3_data_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#49 Warning
-Non-clocked latch  
-The latch comms/input_3_data_reg[3] cannot be properly analyzed as its control pin comms/input_3_data_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#50 Warning
-Non-clocked latch  
-The latch comms/input_3_data_reg[4] cannot be properly analyzed as its control pin comms/input_3_data_reg[4]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#51 Warning
-Non-clocked latch  
-The latch comms/input_3_data_reg[5] cannot be properly analyzed as its control pin comms/input_3_data_reg[5]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#52 Warning
-Non-clocked latch  
-The latch comms/input_3_data_reg[6] cannot be properly analyzed as its control pin comms/input_3_data_reg[6]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#53 Warning
-Non-clocked latch  
-The latch comms/input_3_data_reg[7] cannot be properly analyzed as its control pin comms/input_3_data_reg[7]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#54 Warning
-Non-clocked latch  
-The latch comms/input_3_data_reg[8] cannot be properly analyzed as its control pin comms/input_3_data_reg[8]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#55 Warning
-Non-clocked latch  
-The latch comms/input_3_data_reg[9] cannot be properly analyzed as its control pin comms/input_3_data_reg[9]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#56 Warning
-Non-clocked latch  
-The latch comms/input_data_reg_reg[0] cannot be properly analyzed as its control pin comms/input_data_reg_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#57 Warning
-Non-clocked latch  
-The latch comms/input_data_reg_reg[1] cannot be properly analyzed as its control pin comms/input_data_reg_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#58 Warning
-Non-clocked latch  
-The latch comms/input_data_reg_reg[2] cannot be properly analyzed as its control pin comms/input_data_reg_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#59 Warning
-Non-clocked latch  
-The latch comms/input_data_reg_reg[3] cannot be properly analyzed as its control pin comms/input_data_reg_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#60 Warning
-Non-clocked latch  
-The latch comms/input_data_reg_reg[4] cannot be properly analyzed as its control pin comms/input_data_reg_reg[4]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#61 Warning
-Non-clocked latch  
-The latch comms/input_data_reg_reg[5] cannot be properly analyzed as its control pin comms/input_data_reg_reg[5]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#62 Warning
-Non-clocked latch  
-The latch comms/input_data_reg_reg[6] cannot be properly analyzed as its control pin comms/input_data_reg_reg[6]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#63 Warning
-Non-clocked latch  
-The latch comms/input_data_reg_reg[7] cannot be properly analyzed as its control pin comms/input_data_reg_reg[7]/G is not reached by a timing clock
 Related violations: <none>
 
 

@@ -161,7 +161,8 @@ component communication_module is
         input_3_data : out std_logic_vector(15 downto 0);
 
         nn_out_data : in std_logic_vector(1 downto 0);
-        nn_done : in std_logic
+        nn_done : in std_logic;
+        input_count : out std_logic_vector(2 downto 0)
     );
 end component;
 
@@ -178,6 +179,7 @@ end Component;
 
 signal segval,seg0,seg1:std_logic_vector(6 downto 0);
 signal dispCLK:std_logic;
+signal count: std_logic_vector(2 downto 0);
 
 -- Complete input data from MCU
 signal input_1_signal: std_logic_vector(15 downto 0);
@@ -201,6 +203,7 @@ signal fpga_data_signal: std_logic_vector(1 downto 0); --fpga output data buffer
 
 -- 7 seg display signals
 signal din_signal: std_logic_vector(3 downto 0);
+signal din_count_signal: std_logic_vector(3 downto 0);
 signal counter : std_logic_vector(1 downto 0) := "00";
 
 -- NN signals
@@ -258,6 +261,7 @@ begin
     a_num0_out <= fpga_data_signal;
     
     din_signal <= b_num0(3) & b_num0(2) & b_num0(1) & b_num0(0);
+    din_count_signal <= '0' & count;
     
     comms: communication_module port map(    clk=>clk,
                                         mcu_data=>mcu_data_signal,
@@ -273,7 +277,8 @@ begin
                                         input_3_data=>input_3_signal,
 
                                         nn_done=>nn_done_signal,
-                                        nn_out_data=>nn_result_signal
+                                        nn_out_data=>nn_result_signal,
+                                        input_count => count
                                     );
 
     WEIGHTS: weight_store port map( mmsu_1_weight_matrix => mmsu_1_weight_matrix,
@@ -313,6 +318,7 @@ begin
 
     -- Display on 7 seg
     conv1: binto7seg port map(Din=>din_signal, Dout=>seg0); 
+    conv2: binto7seg port map(Din=>din_count_signal, Dout=>seg1);
     clkctrl: clockdelay port map(CLK=>CLK, osCLK=>dispCLK);
     
     process(dispCLK)
@@ -323,7 +329,16 @@ begin
     end process;
     
 --    with countert select 
-    S <= not(seg0);
-   an <= "1101";
+with counter select
+    S <= not(seg0) when "00",
+         not(seg0) when "01",
+         not(seg1) when "10",
+         not(seg1) when others;
+            
+with counter select
+   an<= "1101" when "00",
+        "1101" when "01",
+        "1110" when "10",
+        "1110" when others;
 
 end Behavioral;

@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/constrs_1/new/basys_3_phase_1.xdc rfile:../../../Phase_1_fpga.srcs/constrs_1/new/basys_3_phase_1.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/constrs_1/new/basys_3_phase_1.xdc rfile:../../../Phase_1_fpga.srcs/constrs_1/new/basys_3_phase_1.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN W5   IOSTANDARD LVCMOS33 } [get_ports CLK]
 set_property src_info {type:XDC file:1 line:45 export:INPUT save:INPUT read:READ} [current_design]

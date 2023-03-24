@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.runs/synth_1'
+HD_PWD='C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

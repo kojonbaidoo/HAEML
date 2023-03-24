@@ -14,47 +14,37 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 18832 
+INFO: Helper process launched with PID 10576 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 362.141 ; gain = 99.520
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 362.574 ; gain = 98.672
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'main' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:50]
-INFO: [Synth 8-3491] module 'communication_module' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:52' bound to instance 'comms' of component 'communication_module' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:262]
-INFO: [Synth 8-638] synthesizing module 'communication_module' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:72]
-WARNING: [Synth 8-614] signal 'mcu_ready' is read in the process but is not in the sensitivity list [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:88]
-WARNING: [Synth 8-614] signal 'mcu_ready_buffer' is read in the process but is not in the sensitivity list [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:88]
-WARNING: [Synth 8-614] signal 'fpga_signal_next' is read in the process but is not in the sensitivity list [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:88]
-WARNING: [Synth 8-614] signal 'mcu_signal' is read in the process but is not in the sensitivity list [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:88]
-WARNING: [Synth 8-614] signal 'mcu_signal_buffer' is read in the process but is not in the sensitivity list [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:88]
-WARNING: [Synth 8-614] signal 'count' is read in the process but is not in the sensitivity list [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:88]
-WARNING: [Synth 8-614] signal 'mcu_data' is read in the process but is not in the sensitivity list [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:88]
-WARNING: [Synth 8-614] signal 'input_data_reg' is read in the process but is not in the sensitivity list [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:88]
-WARNING: [Synth 8-614] signal 'nn_done' is read in the process but is not in the sensitivity list [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:88]
-WARNING: [Synth 8-614] signal 'nn_out_data' is read in the process but is not in the sensitivity list [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:88]
-INFO: [Synth 8-256] done synthesizing module 'communication_module' (1#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:72]
-INFO: [Synth 8-3491] module 'weight_store' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/weight_store.vhd:6' bound to instance 'WEIGHTS' of component 'weight_store' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:279]
-INFO: [Synth 8-638] synthesizing module 'weight_store' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/weight_store.vhd:17]
-WARNING: [Synth 8-3848] Net mmsu_5_bias_vector_signal[0] in module/entity weight_store does not have driver. [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/weight_store.vhd:25]
-WARNING: [Synth 8-3848] Net mmsu_5_bias_vector_signal[1] in module/entity weight_store does not have driver. [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/weight_store.vhd:25]
-WARNING: [Synth 8-3848] Net mmsu_5_bias_vector_signal[2] in module/entity weight_store does not have driver. [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/weight_store.vhd:25]
-INFO: [Synth 8-256] done synthesizing module 'weight_store' (2#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/weight_store.vhd:17]
-INFO: [Synth 8-3491] module 'rounding_bits_generator' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/rounding_bits_generator.vhd:9' bound to instance 'GENERATOR' of component 'rounding_bits_generator' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:286]
-INFO: [Synth 8-638] synthesizing module 'rounding_bits_generator' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/rounding_bits_generator.vhd:17]
-INFO: [Synth 8-3491] module 'PRNG_8_bit' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/PRNG_8_bit.vhd:5' bound to instance 'PRNG_1' of component 'PRNG_8_bit' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/rounding_bits_generator.vhd:37]
-INFO: [Synth 8-638] synthesizing module 'PRNG_8_bit' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/PRNG_8_bit.vhd:13]
-WARNING: [Synth 8-6014] Unused sequential element leading_bit_reg was removed.  [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/PRNG_8_bit.vhd:25]
-INFO: [Synth 8-256] done synthesizing module 'PRNG_8_bit' (3#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/PRNG_8_bit.vhd:13]
-INFO: [Synth 8-256] done synthesizing module 'rounding_bits_generator' (4#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/rounding_bits_generator.vhd:17]
-INFO: [Synth 8-3491] module 'MMSU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:14' bound to instance 'LAYER_MMSU_1' of component 'MMSU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:288]
-INFO: [Synth 8-638] synthesizing module 'MMSU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:28]
-INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
-INFO: [Synth 8-638] synthesizing module 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:29]
+INFO: [Synth 8-638] synthesizing module 'main' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:50]
+INFO: [Synth 8-3491] module 'communication_module' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:5' bound to instance 'comms' of component 'communication_module' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:266]
+INFO: [Synth 8-638] synthesizing module 'communication_module' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'communication_module' (1#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:27]
+INFO: [Synth 8-3491] module 'weight_store' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/weight_store.vhd:6' bound to instance 'WEIGHTS' of component 'weight_store' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:284]
+INFO: [Synth 8-638] synthesizing module 'weight_store' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/weight_store.vhd:17]
+WARNING: [Synth 8-3848] Net mmsu_5_bias_vector_signal[0] in module/entity weight_store does not have driver. [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/weight_store.vhd:25]
+WARNING: [Synth 8-3848] Net mmsu_5_bias_vector_signal[1] in module/entity weight_store does not have driver. [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/weight_store.vhd:25]
+WARNING: [Synth 8-3848] Net mmsu_5_bias_vector_signal[2] in module/entity weight_store does not have driver. [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/weight_store.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'weight_store' (2#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/weight_store.vhd:17]
+INFO: [Synth 8-3491] module 'rounding_bits_generator' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/rounding_bits_generator.vhd:9' bound to instance 'GENERATOR' of component 'rounding_bits_generator' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:291]
+INFO: [Synth 8-638] synthesizing module 'rounding_bits_generator' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/rounding_bits_generator.vhd:17]
+INFO: [Synth 8-3491] module 'PRNG_8_bit' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/PRNG_8_bit.vhd:5' bound to instance 'PRNG_1' of component 'PRNG_8_bit' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/rounding_bits_generator.vhd:37]
+INFO: [Synth 8-638] synthesizing module 'PRNG_8_bit' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/PRNG_8_bit.vhd:13]
+WARNING: [Synth 8-6014] Unused sequential element leading_bit_reg was removed.  [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/PRNG_8_bit.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'PRNG_8_bit' (3#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/PRNG_8_bit.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'rounding_bits_generator' (4#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/rounding_bits_generator.vhd:17]
+INFO: [Synth 8-3491] module 'MMSU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:14' bound to instance 'LAYER_MMSU_1' of component 'MMSU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:293]
+INFO: [Synth 8-638] synthesizing module 'MMSU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:28]
+INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
+INFO: [Synth 8-638] synthesizing module 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:29]
 	Parameter DEVICE bound to: 7SERIES - type: string 
 	Parameter LATENCY bound to: 1 - type: integer 
 	Parameter WIDTH_A bound to: 16 - type: integer 
 	Parameter WIDTH_B bound to: 16 - type: integer 
 	Parameter WIDTH_P bound to: 48 - type: integer 
-INFO: [Synth 8-3491] module 'MACC_MACRO' declared at 'C:/Xilinx/Vivado/2018.3/data/vhdl/src/unimacro/MACC_MACRO.vhd:35' bound to instance 'MACC_MACRO_inst' of component 'MACC_MACRO' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:94]
+INFO: [Synth 8-3491] module 'MACC_MACRO' declared at 'C:/Xilinx/Vivado/2018.3/data/vhdl/src/unimacro/MACC_MACRO.vhd:35' bound to instance 'MACC_MACRO_inst' of component 'MACC_MACRO' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:94]
 INFO: [Synth 8-638] synthesizing module 'unimacro_MACC_MACRO' [C:/Xilinx/Vivado/2018.3/data/vhdl/src/unimacro/MACC_MACRO.vhd:58]
 	Parameter DEVICE bound to: 7SERIES - type: string 
 	Parameter LATENCY bound to: 1 - type: integer 
@@ -93,134 +83,131 @@ INFO: [Synth 8-638] synthesizing module 'unimacro_MACC_MACRO' [C:/Xilinx/Vivado/
 	Parameter USE_SIMD bound to: ONE48 - type: string 
 INFO: [Synth 8-113] binding component instance 'DSP48E_2' to cell 'DSP48E1' [C:/Xilinx/Vivado/2018.3/data/vhdl/src/unimacro/MACC_MACRO.vhd:447]
 INFO: [Synth 8-256] done synthesizing module 'unimacro_MACC_MACRO' (5#1) [C:/Xilinx/Vivado/2018.3/data/vhdl/src/unimacro/MACC_MACRO.vhd:58]
-INFO: [Synth 8-256] done synthesizing module 'VMU_1' (6#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:29]
-INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
-INFO: [Synth 8-256] done synthesizing module 'MMSU_1' (7#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:28]
-INFO: [Synth 8-3491] module 'VRELU_2' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:6' bound to instance 'LAYER_VRELU_2' of component 'VRELU_2' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:293]
-INFO: [Synth 8-638] synthesizing module 'VRELU_2' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:16]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
-INFO: [Synth 8-638] synthesizing module 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:16]
-INFO: [Synth 8-256] done synthesizing module 'relu' (8#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:16]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
-WARNING: [Synth 8-614] signal 'done_vector_value' is read in the process but is not in the sensitivity list [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'VRELU_2' (9#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:16]
-INFO: [Synth 8-3491] module 'MMSU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:14' bound to instance 'LAYER_MMSU_3' of component 'MMSU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:296]
-INFO: [Synth 8-638] synthesizing module 'MMSU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:28]
-INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
-INFO: [Synth 8-638] synthesizing module 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'VMU_1' (6#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:29]
+INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_1' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_1.vhd:16' bound to instance 'vector_multiply' of component 'VMU_1' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'MMSU_1' (7#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_1.vhd:28]
+INFO: [Synth 8-3491] module 'VRELU_2' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:6' bound to instance 'LAYER_VRELU_2' of component 'VRELU_2' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:298]
+INFO: [Synth 8-638] synthesizing module 'VRELU_2' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:16]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'relu' (8#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:16]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:34]
+WARNING: [Synth 8-614] signal 'done_vector_value' is read in the process but is not in the sensitivity list [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'VRELU_2' (9#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_2.vhd:16]
+INFO: [Synth 8-3491] module 'MMSU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:14' bound to instance 'LAYER_MMSU_3' of component 'MMSU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'MMSU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:28]
+INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
+INFO: [Synth 8-638] synthesizing module 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:29]
 	Parameter DEVICE bound to: 7SERIES - type: string 
 	Parameter LATENCY bound to: 1 - type: integer 
 	Parameter WIDTH_A bound to: 16 - type: integer 
 	Parameter WIDTH_B bound to: 16 - type: integer 
 	Parameter WIDTH_P bound to: 48 - type: integer 
-INFO: [Synth 8-3491] module 'MACC_MACRO' declared at 'C:/Xilinx/Vivado/2018.3/data/vhdl/src/unimacro/MACC_MACRO.vhd:35' bound to instance 'MACC_MACRO_inst' of component 'MACC_MACRO' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:94]
-INFO: [Synth 8-256] done synthesizing module 'VMU_3' (10#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:29]
-INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
-INFO: [Synth 8-256] done synthesizing module 'MMSU_3' (11#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:28]
-INFO: [Synth 8-3491] module 'VRELU_4' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:6' bound to instance 'LAYER_VRELU_4' of component 'VRELU_4' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:301]
-INFO: [Synth 8-638] synthesizing module 'VRELU_4' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:16]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
-WARNING: [Synth 8-614] signal 'done_vector_value' is read in the process but is not in the sensitivity list [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'VRELU_4' (12#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:16]
-INFO: [Synth 8-3491] module 'MMSU_5' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_5.vhd:14' bound to instance 'LAYER_MMSU_5' of component 'MMSU_5' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:304]
-INFO: [Synth 8-638] synthesizing module 'MMSU_5' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_5.vhd:28]
-INFO: [Synth 8-3491] module 'VMU_5' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_5.vhd:16' bound to instance 'vector_multiply' of component 'VMU_5' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_5.vhd:50]
-INFO: [Synth 8-638] synthesizing module 'VMU_5' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_5.vhd:29]
+INFO: [Synth 8-3491] module 'MACC_MACRO' declared at 'C:/Xilinx/Vivado/2018.3/data/vhdl/src/unimacro/MACC_MACRO.vhd:35' bound to instance 'MACC_MACRO_inst' of component 'MACC_MACRO' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:94]
+INFO: [Synth 8-256] done synthesizing module 'VMU_3' (10#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:29]
+INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_3' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_3.vhd:16' bound to instance 'vector_multiply' of component 'VMU_3' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'MMSU_3' (11#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_3.vhd:28]
+INFO: [Synth 8-3491] module 'VRELU_4' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:6' bound to instance 'LAYER_VRELU_4' of component 'VRELU_4' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:306]
+INFO: [Synth 8-638] synthesizing module 'VRELU_4' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:16]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:34]
+WARNING: [Synth 8-614] signal 'done_vector_value' is read in the process but is not in the sensitivity list [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'VRELU_4' (12#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_4.vhd:16]
+INFO: [Synth 8-3491] module 'MMSU_5' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_5.vhd:14' bound to instance 'LAYER_MMSU_5' of component 'MMSU_5' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:309]
+INFO: [Synth 8-638] synthesizing module 'MMSU_5' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_5.vhd:28]
+INFO: [Synth 8-3491] module 'VMU_5' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_5.vhd:16' bound to instance 'vector_multiply' of component 'VMU_5' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_5.vhd:50]
+INFO: [Synth 8-638] synthesizing module 'VMU_5' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_5.vhd:29]
 	Parameter DEVICE bound to: 7SERIES - type: string 
 	Parameter LATENCY bound to: 1 - type: integer 
 	Parameter WIDTH_A bound to: 16 - type: integer 
 	Parameter WIDTH_B bound to: 16 - type: integer 
 	Parameter WIDTH_P bound to: 48 - type: integer 
-INFO: [Synth 8-3491] module 'MACC_MACRO' declared at 'C:/Xilinx/Vivado/2018.3/data/vhdl/src/unimacro/MACC_MACRO.vhd:35' bound to instance 'MACC_MACRO_inst' of component 'MACC_MACRO' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_5.vhd:94]
-INFO: [Synth 8-256] done synthesizing module 'VMU_5' (13#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_5.vhd:29]
-INFO: [Synth 8-3491] module 'VMU_5' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_5.vhd:16' bound to instance 'vector_multiply' of component 'VMU_5' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_5.vhd:50]
-INFO: [Synth 8-3491] module 'VMU_5' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_5.vhd:16' bound to instance 'vector_multiply' of component 'VMU_5' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_5.vhd:50]
-INFO: [Synth 8-256] done synthesizing module 'MMSU_5' (14#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_5.vhd:28]
-INFO: [Synth 8-3491] module 'VRELU_6' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_6.vhd:6' bound to instance 'LAYER_VRELU_6' of component 'VRELU_6' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:309]
-INFO: [Synth 8-638] synthesizing module 'VRELU_6' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_6.vhd:16]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_6.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_6.vhd:34]
-INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_6.vhd:34]
-WARNING: [Synth 8-614] signal 'done_vector_value' is read in the process but is not in the sensitivity list [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_6.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'VRELU_6' (15#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_6.vhd:16]
-INFO: [Synth 8-3491] module 'output_comparator' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/output_comparator.vhd:6' bound to instance 'SOFTMAX' of component 'output_comparator' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:312]
-INFO: [Synth 8-638] synthesizing module 'output_comparator' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/output_comparator.vhd:14]
-INFO: [Synth 8-256] done synthesizing module 'output_comparator' (16#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/output_comparator.vhd:14]
-INFO: [Synth 8-3491] module 'binto7seg' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/binto7seg.vhd:34' bound to instance 'conv1' of component 'binto7seg' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:315]
-INFO: [Synth 8-638] synthesizing module 'binto7seg' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/binto7seg.vhd:39]
-INFO: [Synth 8-3491] module 'fourtosixteendecoder' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/fourtosixteendecoder.vhd:34' bound to instance 'decoder' of component 'fourtosixteendecoder' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/binto7seg.vhd:47]
-INFO: [Synth 8-638] synthesizing module 'fourtosixteendecoder' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/fourtosixteendecoder.vhd:39]
-INFO: [Synth 8-256] done synthesizing module 'fourtosixteendecoder' (17#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/fourtosixteendecoder.vhd:39]
-INFO: [Synth 8-256] done synthesizing module 'binto7seg' (18#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/binto7seg.vhd:39]
-INFO: [Synth 8-3491] module 'clockdelay' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/clockdelay.vhd:34' bound to instance 'clkctrl' of component 'clockdelay' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:316]
-INFO: [Synth 8-638] synthesizing module 'clockdelay' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/clockdelay.vhd:39]
-WARNING: [Synth 8-614] signal 'c' is read in the process but is not in the sensitivity list [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/clockdelay.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'clockdelay' (19#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/clockdelay.vhd:39]
-INFO: [Synth 8-256] done synthesizing module 'main' (20#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:50]
-WARNING: [Synth 8-3917] design main has port an[3] driven by constant 1
-WARNING: [Synth 8-3917] design main has port an[2] driven by constant 1
-WARNING: [Synth 8-3917] design main has port an[1] driven by constant 0
-WARNING: [Synth 8-3917] design main has port an[0] driven by constant 1
+INFO: [Synth 8-3491] module 'MACC_MACRO' declared at 'C:/Xilinx/Vivado/2018.3/data/vhdl/src/unimacro/MACC_MACRO.vhd:35' bound to instance 'MACC_MACRO_inst' of component 'MACC_MACRO' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_5.vhd:94]
+INFO: [Synth 8-256] done synthesizing module 'VMU_5' (13#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_5.vhd:29]
+INFO: [Synth 8-3491] module 'VMU_5' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_5.vhd:16' bound to instance 'vector_multiply' of component 'VMU_5' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_5.vhd:50]
+INFO: [Synth 8-3491] module 'VMU_5' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VMU_5.vhd:16' bound to instance 'vector_multiply' of component 'VMU_5' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_5.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'MMSU_5' (14#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/MMSU_5.vhd:28]
+INFO: [Synth 8-3491] module 'VRELU_6' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_6.vhd:6' bound to instance 'LAYER_VRELU_6' of component 'VRELU_6' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:314]
+INFO: [Synth 8-638] synthesizing module 'VRELU_6' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_6.vhd:16]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_6.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_6.vhd:34]
+INFO: [Synth 8-3491] module 'relu' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/relu.vhd:6' bound to instance 'scalar_relu' of component 'relu' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_6.vhd:34]
+WARNING: [Synth 8-614] signal 'done_vector_value' is read in the process but is not in the sensitivity list [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_6.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'VRELU_6' (15#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/VRELU_6.vhd:16]
+INFO: [Synth 8-3491] module 'output_comparator' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/output_comparator.vhd:6' bound to instance 'SOFTMAX' of component 'output_comparator' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:317]
+INFO: [Synth 8-638] synthesizing module 'output_comparator' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/output_comparator.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'output_comparator' (16#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/output_comparator.vhd:14]
+INFO: [Synth 8-3491] module 'binto7seg' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/binto7seg.vhd:34' bound to instance 'conv1' of component 'binto7seg' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:320]
+INFO: [Synth 8-638] synthesizing module 'binto7seg' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/binto7seg.vhd:39]
+INFO: [Synth 8-3491] module 'fourtosixteendecoder' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/fourtosixteendecoder.vhd:34' bound to instance 'decoder' of component 'fourtosixteendecoder' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/binto7seg.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'fourtosixteendecoder' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/fourtosixteendecoder.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'fourtosixteendecoder' (17#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/fourtosixteendecoder.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'binto7seg' (18#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/binto7seg.vhd:39]
+INFO: [Synth 8-3491] module 'binto7seg' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/binto7seg.vhd:34' bound to instance 'conv2' of component 'binto7seg' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:321]
+INFO: [Synth 8-3491] module 'clockdelay' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/clockdelay.vhd:34' bound to instance 'clkctrl' of component 'clockdelay' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:322]
+INFO: [Synth 8-638] synthesizing module 'clockdelay' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/clockdelay.vhd:39]
+WARNING: [Synth 8-614] signal 'c' is read in the process but is not in the sensitivity list [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/clockdelay.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'clockdelay' (19#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/clockdelay.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'main' (20#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:50]
 WARNING: [Synth 8-3331] design output_comparator has unconnected port clk
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 422.133 ; gain = 159.512
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 422.223 ; gain = 158.320
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -233,10 +220,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 422.133 ; gain = 159.512
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 422.223 ; gain = 158.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 422.133 ; gain = 159.512
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 422.223 ; gain = 158.320
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 35 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -245,35 +232,41 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/constrs_1/new/basys_3_phase_1.xdc]
-Finished Parsing XDC File [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/constrs_1/new/basys_3_phase_1.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/constrs_1/new/basys_3_phase_1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
+Parsing XDC File [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/constrs_1/new/basys_3_phase_1.xdc]
+Finished Parsing XDC File [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/constrs_1/new/basys_3_phase_1.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/constrs_1/new/basys_3_phase_1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 773.984 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 774.457 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 773.984 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 774.457 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 773.984 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 773.984 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 774.457 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 774.457 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 773.984 ; gain = 511.363
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 774.457 ; gain = 510.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 773.984 ; gain = 511.363
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 774.457 ; gain = 510.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 773.984 ; gain = 511.363
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 774.457 ; gain = 510.555
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'count_reg' in module 'communication_module'
+INFO: [Synth 8-5544] ROM "count" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "input_1_data" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "input_2_data" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "input_3_data" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "input_data_reg" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5545] ROM "i" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "done" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "dsp_enable" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -298,25 +291,29 @@ INFO: [Synth 8-5545] ROM "result_buffer_temp" won't be mapped to RAM because add
 INFO: [Synth 8-5545] ROM "result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5544] ROM "done" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "c" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-327] inferring latch for variable 'fpga_signal_next_reg' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:86]
-WARNING: [Synth 8-327] inferring latch for variable 'fpga_data_reg' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:143]
-WARNING: [Synth 8-327] inferring latch for variable 'fpga_ready_signal_reg' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:85]
-WARNING: [Synth 8-327] inferring latch for variable 'input_1_data_reg' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:99]
-WARNING: [Synth 8-327] inferring latch for variable 'input_2_data_reg' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:100]
-WARNING: [Synth 8-327] inferring latch for variable 'input_3_data_reg' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:101]
-WARNING: [Synth 8-327] inferring latch for variable 'count_reg' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:97]
-WARNING: [Synth 8-327] inferring latch for variable 'input_data_reg_reg' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:109]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                          0000001 |                              000
+                 iSTATE1 |                          0000010 |                              001
+                 iSTATE2 |                          0000100 |                              010
+                 iSTATE3 |                          0001000 |                              011
+                 iSTATE4 |                          0010000 |                              100
+                 iSTATE5 |                          0100000 |                              101
+                  iSTATE |                          1000000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'count_reg' using encoding 'one-hot' in module 'communication_module'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 773.984 ; gain = 511.363
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 774.457 ; gain = 510.555
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |main__GB0     |           1|     27650|
-|2     |main__GB1     |           1|     12085|
-|3     |main__GB2     |           1|     24165|
+|1     |main__GB0     |           1|     31656|
+|2     |main__GB1     |           1|      9093|
+|3     |main__GB2     |           1|     23449|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -325,25 +322,30 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     48 Bit       Adders := 35    
 	   2 Input     17 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
 +---XORs : 
 	   4 Input      1 Bit         XORs := 1     
 +---Registers : 
 	               48 Bit    Registers := 35    
 	               32 Bit    Registers := 35    
 	               17 Bit    Registers := 1     
-	               16 Bit    Registers := 140   
-	                8 Bit    Registers := 2     
-	                1 Bit    Registers := 178   
+	               16 Bit    Registers := 143   
+	                8 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 180   
 +---Muxes : 
 	   2 Input     17 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 156   
 	   5 Input     16 Bit        Muxes := 86    
 	   3 Input     16 Bit        Muxes := 32    
+	   4 Input      7 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 252   
+	   2 Input      1 Bit        Muxes := 251   
 	   5 Input      1 Bit        Muxes := 175   
-	   6 Input      1 Bit        Muxes := 72    
+	   6 Input      1 Bit        Muxes := 70    
+	   7 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -351,6 +353,25 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module main 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      7 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+Module PRNG_8_bit 
+Detailed RTL Component Info : 
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+Module rounding_bits_generator 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
 Module VMU_3__1 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -575,7 +596,7 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 5     
 	   5 Input      1 Bit        Muxes := 5     
 	   6 Input      1 Bit        Muxes := 2     
-Module relu__20 
+Module relu__1 
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 1     
@@ -583,7 +604,7 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 2     
-Module relu__21 
+Module relu__2 
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 1     
@@ -591,7 +612,7 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 2     
-Module relu__22 
+Module relu__3 
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 1     
@@ -599,114 +620,6 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 2     
-Module relu__23 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
-Module relu__24 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
-Module relu__25 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
-Module relu__26 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
-Module relu__27 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
-Module relu__28 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
-Module relu__29 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
-Module relu__30 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
-Module relu__31 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
-Module relu__32 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
-Module relu__33 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
-Module relu__34 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
-Module relu 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
-Module VRELU_2 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
 Module relu__4 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -811,31 +724,49 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 2     
-Module relu__17 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
-Module relu__18 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
-Module relu__19 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
 Module VRELU_4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module clockdelay 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module output_comparator 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module relu__33 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module relu__34 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module relu 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module VRELU_6 
 Detailed RTL Component Info : 
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 1     
@@ -881,7 +812,7 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 5     
 	   5 Input      1 Bit        Muxes := 5     
 	   6 Input      1 Bit        Muxes := 2     
-Module relu__1 
+Module relu__17 
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 1     
@@ -889,7 +820,7 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 2     
-Module relu__2 
+Module relu__18 
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 1     
@@ -897,7 +828,7 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 2     
-Module relu__3 
+Module relu__19 
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 1     
@@ -905,23 +836,113 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 2     
-Module VRELU_6 
+Module relu__20 
 Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module output_comparator 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input      2 Bit        Muxes := 2     
-Module clockdelay 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     17 Bit       Adders := 1     
 +---Registers : 
-	               17 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     17 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module relu__21 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module relu__22 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module relu__23 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module relu__24 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module relu__25 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module relu__26 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module relu__27 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module relu__28 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module relu__29 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module relu__30 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module relu__31 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module relu__32 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module VRELU_2 
+Detailed RTL Component Info : 
++---Muxes : 
 	   2 Input      1 Bit        Muxes := 1     
 Module VMU_1__1 
 Detailed RTL Component Info : 
@@ -1163,25 +1184,17 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 5     
 	   5 Input      1 Bit        Muxes := 5     
 	   6 Input      1 Bit        Muxes := 2     
-Module PRNG_8_bit 
-Detailed RTL Component Info : 
-+---XORs : 
-	   4 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-Module rounding_bits_generator 
-Detailed RTL Component Info : 
-+---Registers : 
-	                8 Bit    Registers := 1     
 Module communication_module 
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
-	                1 Bit    Registers := 2     
+	               16 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
 +---Muxes : 
-	   6 Input      1 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 3     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -1198,82 +1211,81 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5545] ROM "single_relu_generate[0].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[0].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[1].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[1].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[2].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[2].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[3].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[3].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[4].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[4].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[5].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[5].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[6].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[6].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[7].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[7].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[8].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[8].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[9].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[9].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[10].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[10].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[11].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[11].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[12].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[12].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[13].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[13].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[14].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[14].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[15].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[15].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "done" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "single_relu_generate[0].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[0].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[1].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[1].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[2].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[2].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[3].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[3].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[4].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[4].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[5].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[5].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[6].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[6].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[7].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[7].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[8].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[8].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[9].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[9].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[10].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[10].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[11].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[11].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[12].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[12].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[13].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[13].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[14].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[14].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[15].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[15].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "done" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "single_relu_generate[0].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[0].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[1].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[1].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[2].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "single_relu_generate[2].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[0].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[0].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[1].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[1].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[2].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[2].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[3].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[3].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[4].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[4].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[5].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[5].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[6].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[6].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[7].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[7].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[8].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[8].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[9].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[9].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[10].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[10].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[11].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[11].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[12].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[12].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[13].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[13].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[14].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[15].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_4/single_relu_generate[15].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "LAYER_VRELU_4/done" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "clkctrl/c" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_6/single_relu_generate[0].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_6/single_relu_generate[0].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_6/single_relu_generate[1].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_6/single_relu_generate[1].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_6/single_relu_generate[2].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_6/single_relu_generate[2].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[0].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[0].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[1].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[1].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[2].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[2].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[3].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[3].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[4].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[4].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[5].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[5].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[6].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[6].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[7].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[7].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[8].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[8].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[9].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[9].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[10].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[10].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[11].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[11].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[12].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[12].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[13].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[13].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[14].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[14].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[15].scalar_relu/start" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "LAYER_VRELU_2/single_relu_generate[15].scalar_relu/result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "LAYER_VRELU_2/done" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3917] design main has port an[3] driven by constant 1
 WARNING: [Synth 8-3917] design main has port an[2] driven by constant 1
-WARNING: [Synth 8-3917] design main has port an[1] driven by constant 0
-WARNING: [Synth 8-3917] design main has port an[0] driven by constant 1
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[15].vector_multiply/w_sig_reg[10]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[15].vector_multiply/w_sig_reg[11]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[15].vector_multiply/w_sig_reg[11]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[15].vector_multiply/w_sig_reg[12]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[15].vector_multiply/w_sig_reg[12]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[15].vector_multiply/w_sig_reg[13]'
@@ -1363,37 +1375,34 @@ INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[0].vector_multiply/w_sig_reg[12]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[0].vector_multiply/w_sig_reg[13]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[0].vector_multiply/w_sig_reg[13]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[0].vector_multiply/w_sig_reg[14]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[0].vector_multiply/w_sig_reg[14]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[0].vector_multiply/w_sig_reg[15]'
-INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[2].vector_multiply/w_sig_reg[14]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[2].vector_multiply/w_sig_reg[15]'
-INFO: [Synth 8-3886] merging instance 'i_1/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[30]' (FDCE) to 'i_1/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_1/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[31]' (FDCE) to 'i_1/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_1/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[29]' (FDCE) to 'i_1/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_1/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[28]' (FDCE) to 'i_1/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_1/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[27]' (FDCE) to 'i_1/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_1/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[26]' (FDCE) to 'i_1/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_1/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[25]' (FDCE) to 'i_1/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_1/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[24]' (FDCE) to 'i_1/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_1/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[23]' (FDCE) to 'i_1/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_1/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[22]' (FDCE) to 'i_1/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[30]' (FDCE) to 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[31]' (FDCE) to 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[29]' (FDCE) to 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[28]' (FDCE) to 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[27]' (FDCE) to 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[26]' (FDCE) to 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[25]' (FDCE) to 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[24]' (FDCE) to 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[23]' (FDCE) to 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[22]' (FDCE) to 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[21]' (FDCE) to 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_4/single_relu_generate[15].scalar_relu/start_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_4/single_relu_generate[13].scalar_relu/start_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_4/single_relu_generate[12].scalar_relu/start_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_4/single_relu_generate[11].scalar_relu/start_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_4/single_relu_generate[10].scalar_relu/start_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_4/single_relu_generate[9].scalar_relu/start_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_4/single_relu_generate[8].scalar_relu/start_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_4/single_relu_generate[7].scalar_relu/start_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_4/single_relu_generate[6].scalar_relu/start_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_4/single_relu_generate[5].scalar_relu/start_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_4/single_relu_generate[4].scalar_relu/start_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_4/single_relu_generate[3].scalar_relu/start_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_4/single_relu_generate[2].scalar_relu/start_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_4/single_relu_generate[1].scalar_relu/start_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_4/single_relu_generate[0].scalar_relu/start_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_6/single_relu_generate[1].scalar_relu/start_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_6/single_relu_generate[2].scalar_relu/start_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_6/single_relu_generate[0].scalar_relu/start_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\LAYER_VRELU_4/single_relu_generate[15].scalar_relu/start_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\LAYER_VRELU_4/single_relu_generate[13].scalar_relu/start_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\LAYER_VRELU_4/single_relu_generate[12].scalar_relu/start_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\LAYER_VRELU_4/single_relu_generate[11].scalar_relu/start_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\LAYER_VRELU_4/single_relu_generate[10].scalar_relu/start_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\LAYER_VRELU_4/single_relu_generate[9].scalar_relu/start_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\LAYER_VRELU_4/single_relu_generate[8].scalar_relu/start_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\LAYER_VRELU_4/single_relu_generate[7].scalar_relu/start_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\LAYER_VRELU_4/single_relu_generate[6].scalar_relu/start_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\LAYER_VRELU_4/single_relu_generate[5].scalar_relu/start_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\LAYER_VRELU_4/single_relu_generate[4].scalar_relu/start_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\LAYER_VRELU_4/single_relu_generate[3].scalar_relu/start_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\LAYER_VRELU_4/single_relu_generate[2].scalar_relu/start_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\LAYER_VRELU_4/single_relu_generate[1].scalar_relu/start_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\LAYER_VRELU_4/single_relu_generate[0].scalar_relu/start_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_2/single_relu_generate[14].scalar_relu/start_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_2/single_relu_generate[15].scalar_relu/start_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_2/single_relu_generate[13].scalar_relu/start_reg[1] )
@@ -1410,6 +1419,9 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYE
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_2/single_relu_generate[2].scalar_relu/start_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_2/single_relu_generate[1].scalar_relu/start_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_2/single_relu_generate[0].scalar_relu/start_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_6/single_relu_generate[1].scalar_relu/start_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_6/single_relu_generate[2].scalar_relu/start_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_6/single_relu_generate[0].scalar_relu/start_reg[31] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/LAYER_MMSU_1/\single_vector_multiplier_generate[15].vector_multiply /\w_sig_reg[4] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/LAYER_MMSU_1/\single_vector_multiplier_generate[13].vector_multiply /\w_sig_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/LAYER_MMSU_1/\single_vector_multiplier_generate[11].vector_multiply /\w_sig_reg[1] )
@@ -1418,43 +1430,43 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/LAYER
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/LAYER_MMSU_1/\single_vector_multiplier_generate[1].vector_multiply /\w_sig_reg[5] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/LAYER_MMSU_1/\single_vector_multiplier_generate[0].vector_multiply /\w_sig_reg[8] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:48 . Memory (MB): peak = 773.984 ; gain = 511.363
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:45 . Memory (MB): peak = 774.457 ; gain = 510.555
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |main__GB0     |           1|     10607|
-|2     |main__GB1     |           1|      3076|
-|3     |main__GB2     |           1|      6935|
+|1     |main__GB0     |           1|     11110|
+|2     |main__GB1     |           1|      2708|
+|3     |main__GB2     |           1|      6906|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:01:02 . Memory (MB): peak = 834.402 ; gain = 571.781
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 837.391 ; gain = 573.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:01:02 . Memory (MB): peak = 834.477 ; gain = 571.855
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 837.504 ; gain = 573.602
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |main__GB0     |           1|     10607|
-|2     |main__GB1     |           1|      3076|
-|3     |main__GB2     |           1|      6935|
+|1     |main__GB0     |           1|     11110|
+|2     |main__GB1     |           1|      2708|
+|3     |main__GB2     |           1|      6906|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:53 ; elapsed = 00:01:07 . Memory (MB): peak = 893.043 ; gain = 630.422
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:01:02 . Memory (MB): peak = 896.574 ; gain = 632.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1478,7 +1490,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:01:08 . Memory (MB): peak = 893.043 ; gain = 630.422
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:01:04 . Memory (MB): peak = 896.574 ; gain = 632.672
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1491,7 +1503,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:01:08 . Memory (MB): peak = 893.043 ; gain = 630.422
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:01:04 . Memory (MB): peak = 896.574 ; gain = 632.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1503,25 +1515,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:01:09 . Memory (MB): peak = 893.043 ; gain = 630.422
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:01:05 . Memory (MB): peak = 896.574 ; gain = 632.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:01:09 . Memory (MB): peak = 893.043 ; gain = 630.422
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:01:05 . Memory (MB): peak = 896.574 ; gain = 632.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:01:09 . Memory (MB): peak = 893.043 ; gain = 630.422
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:01:05 . Memory (MB): peak = 896.574 ; gain = 632.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:01:09 . Memory (MB): peak = 893.043 ; gain = 630.422
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:01:05 . Memory (MB): peak = 896.574 ; gain = 632.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1552,33 +1564,30 @@ Report Cell Usage:
 |      |Cell    |Count |
 +------+--------+------+
 |1     |BUFG    |     1|
-|2     |CARRY4  |   988|
+|2     |CARRY4  |   992|
 |3     |DSP48E1 |    35|
 |4     |LUT1    |    92|
-|5     |LUT2    |  2200|
+|5     |LUT2    |  2202|
 |6     |LUT3    |   628|
-|7     |LUT4    |   447|
-|8     |LUT5    |   564|
-|9     |LUT6    |  1406|
+|7     |LUT4    |   435|
+|8     |LUT5    |   568|
+|9     |LUT6    |  1424|
 |10    |MUXF7   |   608|
 |11    |MUXF8   |   304|
 |12    |SRL16E  |     1|
 |13    |FDCE    |    41|
 |14    |FDPE    |    70|
-|15    |FDRE    |  3907|
-|16    |FDSE    |   654|
-|17    |LD      |    10|
-|18    |LDC     |    51|
-|19    |LDP     |     2|
-|20    |IBUF    |    11|
-|21    |OBUF    |    15|
+|15    |FDRE    |  3993|
+|16    |FDSE    |   655|
+|17    |IBUF    |    11|
+|18    |OBUF    |    15|
 +------+--------+------+
 
 Report Instance Areas: 
 +------+------------------------------------------------------------+------------------------+------+
 |      |Instance                                                    |Module                  |Cells |
 +------+------------------------------------------------------------+------------------------+------+
-|1     |top                                                         |                        | 12035|
+|1     |top                                                         |                        | 12075|
 |2     |  GENERATOR                                                 |rounding_bits_generator |    15|
 |3     |    PRNG_1                                                  |PRNG_8_bit              |     7|
 |4     |  LAYER_MMSU_1                                              |MMSU_1                  |  3901|
@@ -1650,9 +1659,9 @@ Report Instance Areas:
 |70    |  LAYER_MMSU_5                                              |MMSU_5                  |   775|
 |71    |    \single_vector_multiplier_generate[0].vector_multiply   |VMU_5                   |   259|
 |72    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_37  |    13|
-|73    |    \single_vector_multiplier_generate[1].vector_multiply   |VMU_5_34                |   257|
+|73    |    \single_vector_multiplier_generate[1].vector_multiply   |VMU_5_34                |   259|
 |74    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_36  |    13|
-|75    |    \single_vector_multiplier_generate[2].vector_multiply   |VMU_5_35                |   259|
+|75    |    \single_vector_multiplier_generate[2].vector_multiply   |VMU_5_35                |   257|
 |76    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO     |    13|
 |77    |  LAYER_VRELU_2                                             |VRELU_2                 |  2086|
 |78    |    \single_relu_generate[0].scalar_relu                    |relu_18                 |    17|
@@ -1671,55 +1680,53 @@ Report Instance Areas:
 |91    |    \single_relu_generate[7].scalar_relu                    |relu_31                 |   273|
 |92    |    \single_relu_generate[8].scalar_relu                    |relu_32                 |    17|
 |93    |    \single_relu_generate[9].scalar_relu                    |relu_33                 |    34|
-|94    |  LAYER_VRELU_4                                             |VRELU_4                 |   632|
-|95    |    \single_relu_generate[0].scalar_relu                    |relu_2                  |    34|
-|96    |    \single_relu_generate[10].scalar_relu                   |relu_3                  |    21|
-|97    |    \single_relu_generate[11].scalar_relu                   |relu_4                  |   113|
+|94    |  LAYER_VRELU_4                                             |VRELU_4                 |   629|
+|95    |    \single_relu_generate[0].scalar_relu                    |relu_2                  |    17|
+|96    |    \single_relu_generate[10].scalar_relu                   |relu_3                  |    17|
+|97    |    \single_relu_generate[11].scalar_relu                   |relu_4                  |   130|
 |98    |    \single_relu_generate[12].scalar_relu                   |relu_5                  |    17|
 |99    |    \single_relu_generate[13].scalar_relu                   |relu_6                  |    17|
-|100   |    \single_relu_generate[14].scalar_relu                   |relu_7                  |    17|
-|101   |    \single_relu_generate[15].scalar_relu                   |relu_8                  |    66|
+|100   |    \single_relu_generate[14].scalar_relu                   |relu_7                  |    18|
+|101   |    \single_relu_generate[15].scalar_relu                   |relu_8                  |    65|
 |102   |    \single_relu_generate[1].scalar_relu                    |relu_9                  |    17|
-|103   |    \single_relu_generate[2].scalar_relu                    |relu_10                 |    18|
+|103   |    \single_relu_generate[2].scalar_relu                    |relu_10                 |    19|
 |104   |    \single_relu_generate[3].scalar_relu                    |relu_11                 |   161|
 |105   |    \single_relu_generate[4].scalar_relu                    |relu_12                 |    17|
 |106   |    \single_relu_generate[5].scalar_relu                    |relu_13                 |    17|
-|107   |    \single_relu_generate[6].scalar_relu                    |relu_14                 |    18|
+|107   |    \single_relu_generate[6].scalar_relu                    |relu_14                 |    17|
 |108   |    \single_relu_generate[7].scalar_relu                    |relu_15                 |    65|
-|109   |    \single_relu_generate[8].scalar_relu                    |relu_16                 |    17|
+|109   |    \single_relu_generate[8].scalar_relu                    |relu_16                 |    18|
 |110   |    \single_relu_generate[9].scalar_relu                    |relu_17                 |    17|
 |111   |  LAYER_VRELU_6                                             |VRELU_6                 |   120|
 |112   |    \single_relu_generate[0].scalar_relu                    |relu                    |    53|
 |113   |    \single_relu_generate[1].scalar_relu                    |relu_0                  |    49|
-|114   |    \single_relu_generate[2].scalar_relu                    |relu_1                  |    17|
+|114   |    \single_relu_generate[2].scalar_relu                    |relu_1                  |    18|
 |115   |  SOFTMAX                                                   |output_comparator       |    10|
-|116   |  comms                                                     |communication_module    |   333|
+|116   |  clkctrl                                                   |clockdelay              |    29|
+|117   |  comms                                                     |communication_module    |   349|
 +------+------------------------------------------------------------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:01:09 . Memory (MB): peak = 893.043 ; gain = 630.422
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:01:05 . Memory (MB): peak = 896.574 ; gain = 632.672
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:01:00 . Memory (MB): peak = 893.043 ; gain = 278.570
-Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:01:10 . Memory (MB): peak = 893.043 ; gain = 630.422
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:55 . Memory (MB): peak = 896.574 ; gain = 280.438
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:01:05 . Memory (MB): peak = 896.574 ; gain = 632.672
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1998 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1939 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 35 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 893.043 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 896.574 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 63 instances were transformed.
-  LD => LDCE: 10 instances
-  LDC => LDCE: 51 instances
-  LDP => LDPE: 2 instances
+No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-381 Infos, 35 Warnings, 0 Critical Warnings and 0 Errors encountered.
+390 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:16 . Memory (MB): peak = 893.043 ; gain = 630.422
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 893.043 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:01:11 . Memory (MB): peak = 896.574 ; gain = 632.672
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 896.574 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/Phase_1_fpga/Phase_1_fpga.runs/synth_1/main.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.runs/synth_1/main.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Feb  6 08:53:48 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 22 12:50:15 2023...

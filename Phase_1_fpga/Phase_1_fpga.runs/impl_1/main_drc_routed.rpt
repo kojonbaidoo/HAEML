@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Mon Feb  6 08:56:13 2023
+| Date         : Wed Mar 22 12:52:04 2023
 | Host         : DESKTOP-T7NU7VJ running 64-bit major release  (build 9200)
 | Command      : report_drc -file main_drc_routed.rpt -pb main_drc_routed.pb -rpx main_drc_routed.rpx
 | Design       : main
@@ -24,14 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 183
+             Violations found: 176
 +----------+----------+-------------------------------------------------------------------+------------+
 | Rule     | Severity | Description                                                       | Violations |
 +----------+----------+-------------------------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties               | 1          |
 | DPIP-1   | Warning  | Input pipelining                                                  | 70         |
 | DPOP-2   | Warning  | MREG Output pipelining                                            | 35         |
-| PDRC-153 | Warning  | Gated clock check                                                 | 7          |
 | AVAL-4   | Advisory | enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND | 35         |
 | REQP-30  | Advisory | enum_MREG_0_connects_CEM_GND                                      | 35         |
 +----------+----------+-------------------------------------------------------------------+------------+
@@ -574,41 +573,6 @@ Related violations: <none>
 DPOP-2#35 Warning
 MREG Output pipelining  
 DSP LAYER_MMSU_5/single_vector_multiplier_generate[2].vector_multiply/MACC_MACRO_inst/bl.DSP48E_2 multiplier stage LAYER_MMSU_5/single_vector_multiplier_generate[2].vector_multiply/MACC_MACRO_inst/bl.DSP48E_2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-PDRC-153#1 Warning
-Gated clock check  
-Net LAYER_VRELU_6/E[0] is a gated clock net sourced by a combinational pin LAYER_VRELU_6/done/O, cell LAYER_VRELU_6/done. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#2 Warning
-Gated clock check  
-Net comms/count_reg[2]_i_2_n_0 is a gated clock net sourced by a combinational pin comms/count_reg[2]_i_2/O, cell comms/count_reg[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#3 Warning
-Gated clock check  
-Net comms/fpga_ready_signal is a gated clock net sourced by a combinational pin comms/fpga_ready_signal_reg_i_1/O, cell comms/fpga_ready_signal_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#4 Warning
-Gated clock check  
-Net comms/fpga_signal_next12_out is a gated clock net sourced by a combinational pin comms/fpga_signal_next_reg_i_2/O, cell comms/fpga_signal_next_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#5 Warning
-Gated clock check  
-Net comms/input_1_data_reg[15]_i_1_n_0 is a gated clock net sourced by a combinational pin comms/input_1_data_reg[15]_i_1/O, cell comms/input_1_data_reg[15]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#6 Warning
-Gated clock check  
-Net comms/input_2_data_reg[15]_i_1_n_0 is a gated clock net sourced by a combinational pin comms/input_2_data_reg[15]_i_1/O, cell comms/input_2_data_reg[15]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#7 Warning
-Gated clock check  
-Net comms/input_data_reg_reg[7]_i_1_n_0 is a gated clock net sourced by a combinational pin comms/input_data_reg_reg[7]_i_1/O, cell comms/input_data_reg_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 AVAL-4#1 Advisory

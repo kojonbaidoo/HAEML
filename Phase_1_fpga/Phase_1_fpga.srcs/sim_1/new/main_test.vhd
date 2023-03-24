@@ -72,39 +72,58 @@ begin
     wait for 5ps;
     mcu_data_signal <= "00000001";
     mcu_signal_signal <= '1';
-    wait for 5ps;
+    wait until rising_edge(fpga_signal_signal);
 
     mcu_signal_signal <= '0';
     wait for 5ps;
     mcu_data_signal <= "00000000";
     mcu_signal_signal <= '1';
+    wait until rising_edge(fpga_signal_signal);
+
+    -- reset comm module
+    mcu_ready_signal <= '0';
+    wait for 5ps;
+    mcu_ready_signal <= '1';
     wait for 5ps;
 
+    --Write byte 1
+    mcu_signal_signal <= '0';
+    wait for 5ps;
+    mcu_data_signal <= "00000001";
+    mcu_signal_signal <= '1';
+    wait until rising_edge(fpga_signal_signal);
+
+    mcu_signal_signal <= '0';
+    wait for 5ps;
+    mcu_data_signal <= "00000000";
+    mcu_signal_signal <= '1';
+    wait until rising_edge(fpga_signal_signal);
+     
     --Write byte 2
     mcu_signal_signal <= '0';
     wait for 5ps;
     mcu_data_signal <= "00000010";
     mcu_signal_signal <= '1';
-    wait for 5ps;
-
+    wait until rising_edge(fpga_signal_signal);
+    
     mcu_signal_signal <= '0';
     wait for 5ps;
     mcu_data_signal <= "00000000";
     mcu_signal_signal <= '1';
-    wait for 5ps;
+    wait until rising_edge(fpga_signal_signal);
 
     --Write byte 3
     mcu_signal_signal <= '0';
     wait for 5ps;
     mcu_data_signal <= "00000011";
     mcu_signal_signal <= '1';
-    wait for 5ps;
-
+    wait until rising_edge(fpga_signal_signal);
+    
     mcu_signal_signal <= '0';
     wait for 5ps;
     mcu_data_signal <= "00000000";
     mcu_signal_signal <= '1';
-    wait for 105ps;
+    wait until rising_edge(fpga_ready_signal);
     end process;
 
     process
