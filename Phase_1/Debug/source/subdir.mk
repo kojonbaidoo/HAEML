@@ -6,17 +6,20 @@
 C_SRCS += \
 ../source/Phase_1.c \
 ../source/mtb.c \
-../source/semihost_hardfault.c 
+../source/semihost_hardfault.c \
+../source/uart_code.c 
 
 C_DEPS += \
 ./source/Phase_1.d \
 ./source/mtb.d \
-./source/semihost_hardfault.d 
+./source/semihost_hardfault.d \
+./source/uart_code.d 
 
 OBJS += \
 ./source/Phase_1.o \
 ./source/mtb.o \
-./source/semihost_hardfault.o 
+./source/semihost_hardfault.o \
+./source/uart_code.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -31,7 +34,7 @@ source/%.o: ../source/%.c source/subdir.mk
 clean: clean-source
 
 clean-source:
-	-$(RM) ./source/Phase_1.d ./source/Phase_1.o ./source/mtb.d ./source/mtb.o ./source/semihost_hardfault.d ./source/semihost_hardfault.o
+	-$(RM) ./source/Phase_1.d ./source/Phase_1.o ./source/mtb.d ./source/mtb.o ./source/semihost_hardfault.d ./source/semihost_hardfault.o ./source/uart_code.d ./source/uart_code.o
 
 .PHONY: clean-source
 

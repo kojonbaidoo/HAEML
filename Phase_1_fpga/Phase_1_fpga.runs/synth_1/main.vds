@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Mar 22 12:48:59 2023
-# Process ID: 17524
+# Start of session at: Fri Mar 31 20:15:22 2023
+# Process ID: 33592
 # Current directory: C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.runs/synth_1
 # Command line: vivado.exe -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
 # Log file: C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.runs/synth_1/main.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10576 
+INFO: Helper process launched with PID 1680 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 362.574 ; gain = 98.672
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 362.832 ; gain = 100.676
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'main' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:50]
 INFO: [Synth 8-3491] module 'communication_module' declared at 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd:5' bound to instance 'comms' of component 'communication_module' [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:266]
@@ -208,7 +208,7 @@ INFO: [Synth 8-256] done synthesizing module 'clockdelay' (19#1) [C:/Users/Kojo/
 INFO: [Synth 8-256] done synthesizing module 'main' (20#1) [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/main.vhd:50]
 WARNING: [Synth 8-3331] design output_comparator has unconnected port clk
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 422.223 ; gain = 158.320
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 422.352 ; gain = 160.195
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -221,10 +221,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 422.223 ; gain = 158.320
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 422.352 ; gain = 160.195
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 422.223 ; gain = 158.320
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 422.352 ; gain = 160.195
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 35 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -237,30 +237,30 @@ Parsing XDC File [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Ph
 Finished Parsing XDC File [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/constrs_1/new/basys_3_phase_1.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/constrs_1/new/basys_3_phase_1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 774.457 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 773.934 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 774.457 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 773.934 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 774.457 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 774.457 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 773.934 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 773.934 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 774.457 ; gain = 510.555
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 773.934 ; gain = 511.777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 774.457 ; gain = 510.555
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 773.934 ; gain = 511.777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 774.457 ; gain = 510.555
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 773.934 ; gain = 511.777
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'count_reg' in module 'communication_module'
 INFO: [Synth 8-5544] ROM "count" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -305,7 +305,7 @@ INFO: [Synth 8-5546] ROM "c" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'count_reg' using encoding 'one-hot' in module 'communication_module'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 774.457 ; gain = 510.555
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 773.934 ; gain = 511.777
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1303,12 +1303,15 @@ INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[13].vector_multiply/w_sig_reg[11]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[13].vector_multiply/w_sig_reg[12]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[13].vector_multiply/w_sig_reg[12]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[13].vector_multiply/w_sig_reg[13]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[13].vector_multiply/w_sig_reg[13]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[13].vector_multiply/w_sig_reg[14]'
-INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[13].vector_multiply/w_sig_reg[14]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[13].vector_multiply/w_sig_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[12].vector_multiply/w_sig_reg[8]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[12].vector_multiply/w_sig_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[12].vector_multiply/w_sig_reg[9]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[12].vector_multiply/w_sig_reg[10]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[12].vector_multiply/w_sig_reg[10]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[12].vector_multiply/w_sig_reg[11]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[12].vector_multiply/w_sig_reg[11]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[12].vector_multiply/w_sig_reg[12]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[12].vector_multiply/w_sig_reg[12]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[12].vector_multiply/w_sig_reg[13]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[12].vector_multiply/w_sig_reg[13]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[12].vector_multiply/w_sig_reg[14]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[12].vector_multiply/w_sig_reg[14]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[12].vector_multiply/w_sig_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[11].vector_multiply/w_sig_reg[8]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[11].vector_multiply/w_sig_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[11].vector_multiply/w_sig_reg[9]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[11].vector_multiply/w_sig_reg[10]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[11].vector_multiply/w_sig_reg[10]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[11].vector_multiply/w_sig_reg[11]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[11].vector_multiply/w_sig_reg[11]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[11].vector_multiply/w_sig_reg[12]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[11].vector_multiply/w_sig_reg[12]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[11].vector_multiply/w_sig_reg[13]'
@@ -1320,6 +1323,7 @@ INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[10].vector_multiply/w_sig_reg[12]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[10].vector_multiply/w_sig_reg[13]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[10].vector_multiply/w_sig_reg[13]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[10].vector_multiply/w_sig_reg[14]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[10].vector_multiply/w_sig_reg[14]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[10].vector_multiply/w_sig_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[9].vector_multiply/w_sig_reg[9]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[9].vector_multiply/w_sig_reg[10]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[9].vector_multiply/w_sig_reg[10]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[9].vector_multiply/w_sig_reg[11]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[9].vector_multiply/w_sig_reg[11]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[9].vector_multiply/w_sig_reg[12]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[9].vector_multiply/w_sig_reg[12]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[9].vector_multiply/w_sig_reg[13]'
@@ -1331,22 +1335,26 @@ INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[8].vector_multiply/w_sig_reg[12]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[8].vector_multiply/w_sig_reg[13]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[8].vector_multiply/w_sig_reg[13]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[8].vector_multiply/w_sig_reg[14]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[8].vector_multiply/w_sig_reg[14]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[8].vector_multiply/w_sig_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[7].vector_multiply/w_sig_reg[9]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[7].vector_multiply/w_sig_reg[10]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[7].vector_multiply/w_sig_reg[10]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[7].vector_multiply/w_sig_reg[11]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[7].vector_multiply/w_sig_reg[11]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[7].vector_multiply/w_sig_reg[12]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[7].vector_multiply/w_sig_reg[12]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[7].vector_multiply/w_sig_reg[13]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[7].vector_multiply/w_sig_reg[13]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[7].vector_multiply/w_sig_reg[14]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[7].vector_multiply/w_sig_reg[14]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[7].vector_multiply/w_sig_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[6].vector_multiply/w_sig_reg[8]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[6].vector_multiply/w_sig_reg[9]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[6].vector_multiply/w_sig_reg[9]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[6].vector_multiply/w_sig_reg[10]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[6].vector_multiply/w_sig_reg[10]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[6].vector_multiply/w_sig_reg[11]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[6].vector_multiply/w_sig_reg[11]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[6].vector_multiply/w_sig_reg[12]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[6].vector_multiply/w_sig_reg[12]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[6].vector_multiply/w_sig_reg[13]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[6].vector_multiply/w_sig_reg[13]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[6].vector_multiply/w_sig_reg[14]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[6].vector_multiply/w_sig_reg[14]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[6].vector_multiply/w_sig_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[5].vector_multiply/w_sig_reg[9]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[5].vector_multiply/w_sig_reg[10]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[5].vector_multiply/w_sig_reg[10]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[5].vector_multiply/w_sig_reg[11]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[5].vector_multiply/w_sig_reg[11]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[5].vector_multiply/w_sig_reg[12]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[5].vector_multiply/w_sig_reg[12]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[5].vector_multiply/w_sig_reg[13]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[5].vector_multiply/w_sig_reg[13]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[5].vector_multiply/w_sig_reg[14]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[5].vector_multiply/w_sig_reg[14]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[5].vector_multiply/w_sig_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[4].vector_multiply/w_sig_reg[8]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[4].vector_multiply/w_sig_reg[9]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[4].vector_multiply/w_sig_reg[9]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[4].vector_multiply/w_sig_reg[10]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[4].vector_multiply/w_sig_reg[10]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[4].vector_multiply/w_sig_reg[11]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[4].vector_multiply/w_sig_reg[11]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[4].vector_multiply/w_sig_reg[12]'
@@ -1359,12 +1367,13 @@ INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[3].vector_multiply/w_sig_reg[12]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[3].vector_multiply/w_sig_reg[13]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[3].vector_multiply/w_sig_reg[13]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[3].vector_multiply/w_sig_reg[14]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[3].vector_multiply/w_sig_reg[14]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[3].vector_multiply/w_sig_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[2].vector_multiply/w_sig_reg[8]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[2].vector_multiply/w_sig_reg[9]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[2].vector_multiply/w_sig_reg[9]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[2].vector_multiply/w_sig_reg[10]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[2].vector_multiply/w_sig_reg[10]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[2].vector_multiply/w_sig_reg[11]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[2].vector_multiply/w_sig_reg[11]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[2].vector_multiply/w_sig_reg[12]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[2].vector_multiply/w_sig_reg[12]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[2].vector_multiply/w_sig_reg[13]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[2].vector_multiply/w_sig_reg[13]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[2].vector_multiply/w_sig_reg[14]'
-INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[1].vector_multiply/w_sig_reg[9]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[1].vector_multiply/w_sig_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[2].vector_multiply/w_sig_reg[14]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[2].vector_multiply/w_sig_reg[15]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[1].vector_multiply/w_sig_reg[10]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[1].vector_multiply/w_sig_reg[11]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[1].vector_multiply/w_sig_reg[11]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[1].vector_multiply/w_sig_reg[12]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[1].vector_multiply/w_sig_reg[12]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[1].vector_multiply/w_sig_reg[13]'
@@ -1378,15 +1387,6 @@ INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[0].vector_multiply/w_sig_reg[14]' (FDE) to 'i_0/LAYER_MMSU_3/single_vector_multiplier_generate[0].vector_multiply/w_sig_reg[15]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[30]' (FDCE) to 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
 INFO: [Synth 8-3886] merging instance 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[31]' (FDCE) to 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[29]' (FDCE) to 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[28]' (FDCE) to 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[27]' (FDCE) to 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[26]' (FDCE) to 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[25]' (FDCE) to 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[24]' (FDCE) to 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[23]' (FDCE) to 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[22]' (FDCE) to 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
-INFO: [Synth 8-3886] merging instance 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[21]' (FDCE) to 'i_0/LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\LAYER_VRELU_4/single_relu_generate[14].scalar_relu/start_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\LAYER_VRELU_4/single_relu_generate[15].scalar_relu/start_reg[1] )
@@ -1423,51 +1423,53 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYE
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_6/single_relu_generate[1].scalar_relu/start_reg[31] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_6/single_relu_generate[2].scalar_relu/start_reg[31] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\LAYER_VRELU_6/single_relu_generate[0].scalar_relu/start_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/LAYER_MMSU_1/\single_vector_multiplier_generate[15].vector_multiply /\w_sig_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/LAYER_MMSU_1/\single_vector_multiplier_generate[13].vector_multiply /\w_sig_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/LAYER_MMSU_1/\single_vector_multiplier_generate[11].vector_multiply /\w_sig_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/LAYER_MMSU_1/\single_vector_multiplier_generate[5].vector_multiply /\w_sig_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/LAYER_MMSU_1/\single_vector_multiplier_generate[14].vector_multiply /\w_sig_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/LAYER_MMSU_1/\single_vector_multiplier_generate[13].vector_multiply /\w_sig_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/LAYER_MMSU_1/\single_vector_multiplier_generate[10].vector_multiply /\w_sig_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/LAYER_MMSU_1/\single_vector_multiplier_generate[7].vector_multiply /\w_sig_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/LAYER_MMSU_1/\single_vector_multiplier_generate[6].vector_multiply /\w_sig_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/LAYER_MMSU_1/\single_vector_multiplier_generate[5].vector_multiply /\w_sig_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/LAYER_MMSU_1/\single_vector_multiplier_generate[4].vector_multiply /\w_sig_reg[2] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/LAYER_MMSU_1/\single_vector_multiplier_generate[2].vector_multiply /\w_sig_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/LAYER_MMSU_1/\single_vector_multiplier_generate[1].vector_multiply /\w_sig_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/LAYER_MMSU_1/\single_vector_multiplier_generate[0].vector_multiply /\w_sig_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/LAYER_MMSU_1/\single_vector_multiplier_generate[1].vector_multiply /\w_sig_reg[15] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:45 . Memory (MB): peak = 774.457 ; gain = 510.555
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:46 . Memory (MB): peak = 773.934 ; gain = 511.777
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |main__GB0     |           1|     11110|
-|2     |main__GB1     |           1|      2708|
-|3     |main__GB2     |           1|      6906|
+|1     |main__GB0     |           1|     11059|
+|2     |main__GB1     |           1|      2713|
+|3     |main__GB2     |           1|      6919|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 837.391 ; gain = 573.488
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:59 . Memory (MB): peak = 838.355 ; gain = 576.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 837.504 ; gain = 573.602
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:59 . Memory (MB): peak = 838.430 ; gain = 576.273
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |main__GB0     |           1|     11110|
-|2     |main__GB1     |           1|      2708|
-|3     |main__GB2     |           1|      6906|
+|1     |main__GB0     |           1|     11059|
+|2     |main__GB1     |           1|      2713|
+|3     |main__GB2     |           1|      6919|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:01:02 . Memory (MB): peak = 896.574 ; gain = 632.672
+Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:01:04 . Memory (MB): peak = 894.137 ; gain = 631.980
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1491,7 +1493,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:01:04 . Memory (MB): peak = 896.574 ; gain = 632.672
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:01:05 . Memory (MB): peak = 894.137 ; gain = 631.980
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1504,7 +1506,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:01:04 . Memory (MB): peak = 896.574 ; gain = 632.672
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:01:06 . Memory (MB): peak = 894.137 ; gain = 631.980
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1516,25 +1518,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:01:05 . Memory (MB): peak = 896.574 ; gain = 632.672
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:51 ; elapsed = 00:01:06 . Memory (MB): peak = 894.137 ; gain = 631.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:01:05 . Memory (MB): peak = 896.574 ; gain = 632.672
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:01:06 . Memory (MB): peak = 894.137 ; gain = 631.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:01:05 . Memory (MB): peak = 896.574 ; gain = 632.672
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:01:06 . Memory (MB): peak = 894.137 ; gain = 631.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:01:05 . Memory (MB): peak = 896.574 ; gain = 632.672
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:01:06 . Memory (MB): peak = 894.137 ; gain = 631.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1568,18 +1570,18 @@ Report Cell Usage:
 |2     |CARRY4  |   992|
 |3     |DSP48E1 |    35|
 |4     |LUT1    |    92|
-|5     |LUT2    |  2202|
-|6     |LUT3    |   628|
-|7     |LUT4    |   435|
-|8     |LUT5    |   568|
-|9     |LUT6    |  1424|
-|10    |MUXF7   |   608|
-|11    |MUXF8   |   304|
+|5     |LUT2    |  2214|
+|6     |LUT3    |   627|
+|7     |LUT4    |   386|
+|8     |LUT5    |   589|
+|9     |LUT6    |  1444|
+|10    |MUXF7   |   604|
+|11    |MUXF8   |   298|
 |12    |SRL16E  |     1|
 |13    |FDCE    |    41|
 |14    |FDPE    |    70|
-|15    |FDRE    |  3993|
-|16    |FDSE    |   655|
+|15    |FDRE    |  4032|
+|16    |FDSE    |   613|
 |17    |IBUF    |    11|
 |18    |OBUF    |    15|
 +------+--------+------+
@@ -1588,100 +1590,100 @@ Report Instance Areas:
 +------+------------------------------------------------------------+------------------------+------+
 |      |Instance                                                    |Module                  |Cells |
 +------+------------------------------------------------------------+------------------------+------+
-|1     |top                                                         |                        | 12075|
+|1     |top                                                         |                        | 12065|
 |2     |  GENERATOR                                                 |rounding_bits_generator |    15|
 |3     |    PRNG_1                                                  |PRNG_8_bit              |     7|
-|4     |  LAYER_MMSU_1                                              |MMSU_1                  |  3901|
-|5     |    \single_vector_multiplier_generate[0].vector_multiply   |VMU_1                   |   242|
+|4     |  LAYER_MMSU_1                                              |MMSU_1                  |  3911|
+|5     |    \single_vector_multiplier_generate[0].vector_multiply   |VMU_1                   |   245|
 |6     |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_99  |     1|
-|7     |    \single_vector_multiplier_generate[10].vector_multiply  |VMU_1_69                |   242|
+|7     |    \single_vector_multiplier_generate[10].vector_multiply  |VMU_1_69                |   240|
 |8     |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_98  |     1|
-|9     |    \single_vector_multiplier_generate[11].vector_multiply  |VMU_1_70                |   243|
+|9     |    \single_vector_multiplier_generate[11].vector_multiply  |VMU_1_70                |   240|
 |10    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_97  |     1|
-|11    |    \single_vector_multiplier_generate[12].vector_multiply  |VMU_1_71                |   242|
+|11    |    \single_vector_multiplier_generate[12].vector_multiply  |VMU_1_71                |   246|
 |12    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_96  |     1|
-|13    |    \single_vector_multiplier_generate[13].vector_multiply  |VMU_1_72                |   242|
+|13    |    \single_vector_multiplier_generate[13].vector_multiply  |VMU_1_72                |   241|
 |14    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_95  |     1|
-|15    |    \single_vector_multiplier_generate[14].vector_multiply  |VMU_1_73                |   243|
+|15    |    \single_vector_multiplier_generate[14].vector_multiply  |VMU_1_73                |   241|
 |16    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_94  |     1|
-|17    |    \single_vector_multiplier_generate[15].vector_multiply  |VMU_1_74                |   256|
+|17    |    \single_vector_multiplier_generate[15].vector_multiply  |VMU_1_74                |   260|
 |18    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_93  |     1|
-|19    |    \single_vector_multiplier_generate[1].vector_multiply   |VMU_1_75                |   241|
+|19    |    \single_vector_multiplier_generate[1].vector_multiply   |VMU_1_75                |   240|
 |20    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_92  |     1|
-|21    |    \single_vector_multiplier_generate[2].vector_multiply   |VMU_1_76                |   238|
+|21    |    \single_vector_multiplier_generate[2].vector_multiply   |VMU_1_76                |   240|
 |22    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_91  |     1|
-|23    |    \single_vector_multiplier_generate[3].vector_multiply   |VMU_1_77                |   241|
+|23    |    \single_vector_multiplier_generate[3].vector_multiply   |VMU_1_77                |   243|
 |24    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_90  |     1|
 |25    |    \single_vector_multiplier_generate[4].vector_multiply   |VMU_1_78                |   243|
 |26    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_89  |     1|
-|27    |    \single_vector_multiplier_generate[5].vector_multiply   |VMU_1_79                |   241|
+|27    |    \single_vector_multiplier_generate[5].vector_multiply   |VMU_1_79                |   245|
 |28    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_88  |     1|
-|29    |    \single_vector_multiplier_generate[6].vector_multiply   |VMU_1_80                |   261|
+|29    |    \single_vector_multiplier_generate[6].vector_multiply   |VMU_1_80                |   257|
 |30    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_87  |     1|
-|31    |    \single_vector_multiplier_generate[7].vector_multiply   |VMU_1_81                |   237|
+|31    |    \single_vector_multiplier_generate[7].vector_multiply   |VMU_1_81                |   246|
 |32    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_86  |     1|
-|33    |    \single_vector_multiplier_generate[8].vector_multiply   |VMU_1_82                |   244|
+|33    |    \single_vector_multiplier_generate[8].vector_multiply   |VMU_1_82                |   239|
 |34    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_85  |     1|
 |35    |    \single_vector_multiplier_generate[9].vector_multiply   |VMU_1_83                |   242|
 |36    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_84  |     1|
-|37    |  LAYER_MMSU_3                                              |MMSU_3                  |  4128|
-|38    |    \single_vector_multiplier_generate[0].vector_multiply   |VMU_3                   |   254|
+|37    |  LAYER_MMSU_3                                              |MMSU_3                  |  4105|
+|38    |    \single_vector_multiplier_generate[0].vector_multiply   |VMU_3                   |   256|
 |39    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_68  |     1|
-|40    |    \single_vector_multiplier_generate[10].vector_multiply  |VMU_3_38                |   256|
+|40    |    \single_vector_multiplier_generate[10].vector_multiply  |VMU_3_38                |   257|
 |41    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_67  |     1|
-|42    |    \single_vector_multiplier_generate[11].vector_multiply  |VMU_3_39                |   256|
+|42    |    \single_vector_multiplier_generate[11].vector_multiply  |VMU_3_39                |   251|
 |43    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_66  |     1|
-|44    |    \single_vector_multiplier_generate[12].vector_multiply  |VMU_3_40                |   256|
+|44    |    \single_vector_multiplier_generate[12].vector_multiply  |VMU_3_40                |   252|
 |45    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_65  |     1|
-|46    |    \single_vector_multiplier_generate[13].vector_multiply  |VMU_3_41                |   256|
+|46    |    \single_vector_multiplier_generate[13].vector_multiply  |VMU_3_41                |   254|
 |47    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_64  |     1|
 |48    |    \single_vector_multiplier_generate[14].vector_multiply  |VMU_3_42                |   254|
 |49    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_63  |     1|
-|50    |    \single_vector_multiplier_generate[15].vector_multiply  |VMU_3_43                |   273|
+|50    |    \single_vector_multiplier_generate[15].vector_multiply  |VMU_3_43                |   276|
 |51    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_62  |     1|
 |52    |    \single_vector_multiplier_generate[1].vector_multiply   |VMU_3_44                |   256|
 |53    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_61  |     1|
-|54    |    \single_vector_multiplier_generate[2].vector_multiply   |VMU_3_45                |   254|
+|54    |    \single_vector_multiplier_generate[2].vector_multiply   |VMU_3_45                |   255|
 |55    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_60  |     1|
 |56    |    \single_vector_multiplier_generate[3].vector_multiply   |VMU_3_46                |   254|
 |57    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_59  |     1|
-|58    |    \single_vector_multiplier_generate[4].vector_multiply   |VMU_3_47                |   257|
+|58    |    \single_vector_multiplier_generate[4].vector_multiply   |VMU_3_47                |   249|
 |59    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_58  |     1|
-|60    |    \single_vector_multiplier_generate[5].vector_multiply   |VMU_3_48                |   257|
+|60    |    \single_vector_multiplier_generate[5].vector_multiply   |VMU_3_48                |   254|
 |61    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_57  |     1|
-|62    |    \single_vector_multiplier_generate[6].vector_multiply   |VMU_3_49                |   272|
+|62    |    \single_vector_multiplier_generate[6].vector_multiply   |VMU_3_49                |   270|
 |63    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_56  |     1|
-|64    |    \single_vector_multiplier_generate[7].vector_multiply   |VMU_3_50                |   256|
+|64    |    \single_vector_multiplier_generate[7].vector_multiply   |VMU_3_50                |   252|
 |65    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_55  |     1|
-|66    |    \single_vector_multiplier_generate[8].vector_multiply   |VMU_3_51                |   254|
+|66    |    \single_vector_multiplier_generate[8].vector_multiply   |VMU_3_51                |   257|
 |67    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_54  |     1|
-|68    |    \single_vector_multiplier_generate[9].vector_multiply   |VMU_3_52                |   259|
+|68    |    \single_vector_multiplier_generate[9].vector_multiply   |VMU_3_52                |   254|
 |69    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_53  |     1|
-|70    |  LAYER_MMSU_5                                              |MMSU_5                  |   775|
-|71    |    \single_vector_multiplier_generate[0].vector_multiply   |VMU_5                   |   259|
+|70    |  LAYER_MMSU_5                                              |MMSU_5                  |   783|
+|71    |    \single_vector_multiplier_generate[0].vector_multiply   |VMU_5                   |   264|
 |72    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_37  |    13|
 |73    |    \single_vector_multiplier_generate[1].vector_multiply   |VMU_5_34                |   259|
 |74    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO_36  |    13|
-|75    |    \single_vector_multiplier_generate[2].vector_multiply   |VMU_5_35                |   257|
+|75    |    \single_vector_multiplier_generate[2].vector_multiply   |VMU_5_35                |   260|
 |76    |      MACC_MACRO_inst                                       |unimacro_MACC_MACRO     |    13|
-|77    |  LAYER_VRELU_2                                             |VRELU_2                 |  2086|
+|77    |  LAYER_VRELU_2                                             |VRELU_2                 |  2082|
 |78    |    \single_relu_generate[0].scalar_relu                    |relu_18                 |    17|
 |79    |    \single_relu_generate[10].scalar_relu                   |relu_19                 |    17|
-|80    |    \single_relu_generate[11].scalar_relu                   |relu_20                 |   529|
+|80    |    \single_relu_generate[11].scalar_relu                   |relu_20                 |   528|
 |81    |    \single_relu_generate[12].scalar_relu                   |relu_21                 |    19|
 |82    |    \single_relu_generate[13].scalar_relu                   |relu_22                 |    17|
 |83    |    \single_relu_generate[14].scalar_relu                   |relu_23                 |    17|
 |84    |    \single_relu_generate[15].scalar_relu                   |relu_24                 |   273|
 |85    |    \single_relu_generate[1].scalar_relu                    |relu_25                 |    17|
 |86    |    \single_relu_generate[2].scalar_relu                    |relu_26                 |    17|
-|87    |    \single_relu_generate[3].scalar_relu                    |relu_27                 |   785|
+|87    |    \single_relu_generate[3].scalar_relu                    |relu_27                 |   779|
 |88    |    \single_relu_generate[4].scalar_relu                    |relu_28                 |    17|
 |89    |    \single_relu_generate[5].scalar_relu                    |relu_29                 |    17|
-|90    |    \single_relu_generate[6].scalar_relu                    |relu_30                 |    17|
-|91    |    \single_relu_generate[7].scalar_relu                    |relu_31                 |   273|
+|90    |    \single_relu_generate[6].scalar_relu                    |relu_30                 |    18|
+|91    |    \single_relu_generate[7].scalar_relu                    |relu_31                 |   274|
 |92    |    \single_relu_generate[8].scalar_relu                    |relu_32                 |    17|
 |93    |    \single_relu_generate[9].scalar_relu                    |relu_33                 |    34|
-|94    |  LAYER_VRELU_4                                             |VRELU_4                 |   629|
+|94    |  LAYER_VRELU_4                                             |VRELU_4                 |   628|
 |95    |    \single_relu_generate[0].scalar_relu                    |relu_2                  |    17|
 |96    |    \single_relu_generate[10].scalar_relu                   |relu_3                  |    17|
 |97    |    \single_relu_generate[11].scalar_relu                   |relu_4                  |   130|
@@ -1691,7 +1693,7 @@ Report Instance Areas:
 |101   |    \single_relu_generate[15].scalar_relu                   |relu_8                  |    65|
 |102   |    \single_relu_generate[1].scalar_relu                    |relu_9                  |    17|
 |103   |    \single_relu_generate[2].scalar_relu                    |relu_10                 |    19|
-|104   |    \single_relu_generate[3].scalar_relu                    |relu_11                 |   161|
+|104   |    \single_relu_generate[3].scalar_relu                    |relu_11                 |   160|
 |105   |    \single_relu_generate[4].scalar_relu                    |relu_12                 |    17|
 |106   |    \single_relu_generate[5].scalar_relu                    |relu_13                 |    17|
 |107   |    \single_relu_generate[6].scalar_relu                    |relu_14                 |    17|
@@ -1707,27 +1709,27 @@ Report Instance Areas:
 |117   |  comms                                                     |communication_module    |   349|
 +------+------------------------------------------------------------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:01:05 . Memory (MB): peak = 896.574 ; gain = 632.672
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:01:06 . Memory (MB): peak = 894.137 ; gain = 631.980
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:55 . Memory (MB): peak = 896.574 ; gain = 280.438
-Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:01:05 . Memory (MB): peak = 896.574 ; gain = 632.672
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:41 ; elapsed = 00:00:56 . Memory (MB): peak = 894.137 ; gain = 280.398
+Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:01:07 . Memory (MB): peak = 894.137 ; gain = 631.980
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1939 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1929 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 35 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 896.574 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 894.137 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-390 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+392 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:01:11 . Memory (MB): peak = 896.574 ; gain = 632.672
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 896.574 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:01:26 . Memory (MB): peak = 894.137 ; gain = 643.488
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 894.137 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.runs/synth_1/main.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 22 12:50:15 2023...
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 31 20:16:57 2023...

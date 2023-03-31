@@ -1,1 +1,1 @@
--wto "b90d65cf0493461b876cd4c975342804" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "main_test_behav" "xil_defaultlib.main_test" -log "elaborate.log" 
+-wto "b90d65cf0493461b876cd4c975342804" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" -L "xpm" --snapshot "main_test_behav" "xil_defaultlib.main_test" -log "elaborate.log" 

@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sim_1/new/main_test.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'main_test'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Kojo/OneDrive/Ashesi/Capstone/Implementation/HAEML/Phase_1_fpga/Phase_1_fpga.srcs/sources_1/new/communication_module.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'communication_module'

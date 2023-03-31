@@ -1,0 +1,11 @@
+C:\Users\Kojo\OneDrive\Ashesi\Capstone\Implementation\HAEML\Phase_1\CMSIS/core_cm0plus.h:745:22:NVIC_EnableIRQ	16	static
+C:\Users\Kojo\OneDrive\Ashesi\Capstone\Implementation\HAEML\Phase_1\CMSIS/core_cm0plus.h:791:22:NVIC_ClearPendingIRQ	16	static
+C:\Users\Kojo\OneDrive\Ashesi\Capstone\Implementation\HAEML\Phase_1\CMSIS/core_cm0plus.h:804:22:NVIC_SetPriority	24	static
+../source/uart_code.c:79:6:init_pins	8	static
+../source/uart_code.c:88:6:init_UART	16	static
+../source/uart_code.c:152:6:uart_send_byte	16	static
+../source/uart_code.c:160:6:uart_print	16	static
+../source/uart_code.c:169:6:uart_esc_code	16	static
+../source/uart_code.c:179:6:init_LEDs	8	static
+../source/uart_code.c:193:6:lightLED	8	static
+../source/uart_code.c:225:6:UART0_IRQHandler	16	static

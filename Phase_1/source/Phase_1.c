@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "MKL25Z4.h"
+#include "uart_code.h"
 
 #define MD0 0
 #define MD1 1
@@ -40,8 +41,10 @@ void init_LED();
 void init_TPM();
 void init_clock();
 void init_systick();
+void init_UART0();
 //void TPM0_IRQHandler();
 
+void transmit_data(char *pdata);
 uint32_t get_time_diff_ms(uint32_t start_time, uint32_t end_time);
 void delay_ms(uint16_t delay);
 void delay_us(uint16_t delay);
@@ -73,56 +76,41 @@ int main(void) {
 
 	PTD->PSOR |= 1 << 5;// For Testing purposes
 
+	init_UART0();// Initialise UART
+	delay_ms(200);
 	init_LED();// Initialise the on-board RED RED_LED
 	fpga_reset();// Reset the communication module of the FPGA
 
 	__enable_irq();// Enable interrupts
 	init_systick();// Initialise the SysTick timer
-
+	char string[10];
 	while(1){
-//		fpga_write_byte(0x01);
-////		delay_ms(10);
-//		fpga_write_byte(0x02);
-////		delay_ms(10);
-//		fpga_write_byte(0x03);
-////		delay_ms(10);
-//		fpga_write_byte(0x04);
-////		delay_ms(10);
-//		fpga_write_byte(0x05);
-////		delay_ms(10);
-//		fpga_write_byte(0x06);
-////		delay_ms(10);
-//		fpga_reset();// Reset the communication module of the FPGA
+		sprintf(string,"%d,\n",25);
+				transmit_data(string);
 
-		// Systic timer usage
-//		start_time = SysTick->VAL;
-//		delay_ms(4);
-//		end_time = SysTick->VAL;
-//		inference_time = get_time_diff_ms(start_time, end_time);
-//		delay_ms(4);
-
-		switch(processing){
-			case 0: // Check if FPGA is performing inference
-				start_time = SysTick->VAL;
-				processing = 1;
-				fpga_write(0x0201);
-				fpga_write(0x0403);
-				fpga_write(0x0605);
-				break;
-
-			case 2: // Check if FPGA is done performing inference
-				end_time = global_end_time;
-				nn_result = fpga_read();
-				inference_time = get_time_diff_ms(start_time, end_time);
-				processing = 0;
-				fpga_reset();// Reset the communication module of the FPGA
-				break;
-
-			default:
-				fpga_reset();
-				processing = 0;
-				break;
-		}
+//		switch(processing){
+//			case 0: // Check if FPGA is performing inference
+//				start_time = SysTick->VAL;
+//				processing = 1;
+//				fpga_write(0x0201);
+//				fpga_write(0x0403);
+//				fpga_write(0x0605);
+//				break;
+//
+//			case 2: // Check if FPGA is done performing inference
+//				end_time = global_end_time;
+//				nn_result = fpga_read();
+//				inference_time = get_time_diff_ms(start_time, end_time);
+////				uart_send_byte(inference_time);
+//				processing = 0;
+//				fpga_reset();// Reset the communication module of the FPGA
+//				break;
+//
+//			default:
+//				fpga_reset();
+//				processing = 0;
+//				break;
+//		}
 	}
 	return 0;
 }
@@ -169,6 +157,40 @@ void init_clock(){
 	MCG->C4 |= (1 << 7);// Important for setting frequency to 48MHz
 }
 
+void init_UART0(){
+	// Select MCGFLLCLK as UART0 clock
+	SIM->SOPT2 |= SIM_SOPT2_UART0SRC(1);
+
+	// Enable UART0 Clock
+	SIM->SCGC4 |= SIM_SCGC4_UART0(1);
+
+	// Enable PORTA clock
+	SIM->SCGC5 |= SIM_SCGC5_PORTA(1);
+
+	PORTA->PCR[1] |=  PORT_PCR_MUX(2); /* PTA1 as ALT2 (UART0) */
+	PORTA->PCR[2] |=  PORT_PCR_MUX(2); /* PTA2 as ALT2 (UART0) */
+
+	// Configure Baud Rate as 9600
+	UART0->BDL = 0x38;
+	UART0->BDH = 0x1;
+
+	// Configure Serial Port as 8-N-1
+	// (8 data bits, No parity and 1 stop bit)
+	UART0->C1  = 0x00;
+
+	// Configure Tx/Rx Interrupts
+	UART0->C2  |= UART_C2_TIE(0);  // Tx Interrupt disabled
+	UART0->C2  |= UART_C2_TCIE(0); // Tx Complete Interrupt disabled
+	UART0->C2  |= UART_C2_RIE(1);     // Rx Interrupt enabled
+
+	// Configure Transmitter/Receiever
+	UART0->C2  |= UART_C2_TE(1);  // Tx Enabled
+	UART0->C2  |= UART_C2_RE(1);  // Rx Enabled
+
+	// Enable UART0 Interrupt
+	NVIC_EnableIRQ(UART0_IRQn);
+}
+
 void init_signal_pins(){
 	SIM->SCGC5 |= SIM_SCGC5_PORTB_MASK;
 	SIM->SCGC5 |= SIM_SCGC5_PORTD_MASK;
@@ -201,7 +223,6 @@ void init_signal_pins(){
 
 	// Initialise pin values
 	PTB->PSOR |= (1 << MCU_SIGNAL); // Set MCU_SIGNAL to high
-
 }
 
 void init_LED(){
@@ -320,6 +341,26 @@ void PORTD_IRQHandler(void){
 void TPM0_IRQHandler(){
 	TPM0->SC |= TPM_SC_TOF_MASK;
 	PTD->PTOR |= 1 << 5;
+}
+
+void transmit_data(char *pdata){
+	uint16_t i;
+
+	// Wait until complete string is transmitted on serial port
+	// and every byte is shifted out of Transmit buffer before
+	// loading new byte
+	while (*pdata)
+	{
+		__disable_irq();
+		UART0->D = *pdata;
+
+		// Wait until byte is transmitted from Tx Buffer
+		while (!(UART0->S1 & UART_S1_TDRE_MASK)) {
+		}
+		__enable_irq();
+
+		pdata++;
+	}
 }
 
 uint32_t get_time_diff_ms(uint32_t start_time, uint32_t end_time){

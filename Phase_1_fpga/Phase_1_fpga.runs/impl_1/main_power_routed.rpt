@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Wed Mar 22 12:52:11 2023
+| Date             : Fri Mar 31 20:18:47 2023
 | Host             : DESKTOP-T7NU7VJ running 64-bit major release  (build 9200)
 | Command          : report_power -file main_power_routed.rpt -pb main_power_summary_routed.pb -rpx main_power_routed.rpx
 | Design           : main
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 48.444 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 48.265 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 47.958                           |
+| Dynamic (W)              | 47.779                           |
 | Device Static (W)        | 0.486                            |
 | Effective TJA (C/W)      | 5.0                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,19 +52,19 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic             |     3.851 |    12197 |       --- |             --- |
-|   LUT as Logic          |     2.316 |     3920 |     20800 |           18.85 |
-|   CARRY4                |     1.492 |      992 |      8150 |           12.17 |
-|   Register              |     0.029 |     4759 |     41600 |           11.44 |
+| Slice Logic             |     3.657 |    12187 |       --- |             --- |
+|   LUT as Logic          |     2.174 |     3923 |     20800 |           18.86 |
+|   CARRY4                |     1.441 |      992 |      8150 |           12.17 |
+|   Register              |     0.028 |     4756 |     41600 |           11.43 |
 |   LUT as Shift Register |     0.008 |        1 |      9600 |            0.01 |
 |   BUFG                  |     0.006 |        1 |        32 |            3.13 |
-|   F7/F8 Muxes           |    <0.001 |      912 |     32600 |            2.80 |
+|   F7/F8 Muxes           |    <0.001 |      902 |     32600 |            2.77 |
 |   Others                |     0.000 |      186 |       --- |             --- |
-| Signals                 |     6.930 |     8154 |       --- |             --- |
-| DSPs                    |    17.479 |       35 |        90 |           38.89 |
+| Signals                 |     7.358 |     8172 |       --- |             --- |
+| DSPs                    |    17.066 |       35 |        90 |           38.89 |
 | I/O                     |    19.698 |       26 |       106 |           24.53 |
 | Static Power            |     0.486 |          |           |                 |
-| Total                   |    48.444 |          |           |                 |
+| Total                   |    48.265 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |    28.645 |      28.304 |      0.341 |
+| Vccint    |       1.000 |    28.466 |      28.125 |      0.341 |
 | Vccaux    |       1.800 |     0.774 |       0.720 |      0.053 |
 | Vcco33    |       3.300 |     5.564 |       5.563 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -141,65 +141,65 @@ Table of Contents
 +-----------------------------------------------------------+-----------+
 | Name                                                      | Power (W) |
 +-----------------------------------------------------------+-----------+
-| main                                                      |    47.958 |
-|   GENERATOR                                               |     1.589 |
-|     PRNG_1                                                |     0.057 |
-|   LAYER_MMSU_1                                            |    24.599 |
-|     single_vector_multiplier_generate[0].vector_multiply  |     1.580 |
-|       MACC_MACRO_inst                                     |     1.423 |
-|     single_vector_multiplier_generate[10].vector_multiply |     1.535 |
-|       MACC_MACRO_inst                                     |     1.386 |
-|     single_vector_multiplier_generate[11].vector_multiply |     1.511 |
-|       MACC_MACRO_inst                                     |     1.353 |
-|     single_vector_multiplier_generate[12].vector_multiply |     1.548 |
-|       MACC_MACRO_inst                                     |     1.386 |
-|     single_vector_multiplier_generate[13].vector_multiply |     1.586 |
-|       MACC_MACRO_inst                                     |     1.421 |
-|     single_vector_multiplier_generate[14].vector_multiply |     1.538 |
-|       MACC_MACRO_inst                                     |     1.382 |
-|     single_vector_multiplier_generate[15].vector_multiply |     1.531 |
-|       MACC_MACRO_inst                                     |     1.377 |
-|     single_vector_multiplier_generate[1].vector_multiply  |     1.542 |
-|       MACC_MACRO_inst                                     |     1.375 |
-|     single_vector_multiplier_generate[2].vector_multiply  |     1.532 |
-|       MACC_MACRO_inst                                     |     1.381 |
-|     single_vector_multiplier_generate[3].vector_multiply  |     1.491 |
-|       MACC_MACRO_inst                                     |     1.329 |
-|     single_vector_multiplier_generate[4].vector_multiply  |     1.500 |
+| main                                                      |    47.779 |
+|   GENERATOR                                               |     1.609 |
+|     PRNG_1                                                |     0.059 |
+|   LAYER_MMSU_1                                            |    24.479 |
+|     single_vector_multiplier_generate[0].vector_multiply  |     1.533 |
+|       MACC_MACRO_inst                                     |     1.378 |
+|     single_vector_multiplier_generate[10].vector_multiply |     1.558 |
+|       MACC_MACRO_inst                                     |     1.399 |
+|     single_vector_multiplier_generate[11].vector_multiply |     1.656 |
+|       MACC_MACRO_inst                                     |     1.500 |
+|     single_vector_multiplier_generate[12].vector_multiply |     1.528 |
+|       MACC_MACRO_inst                                     |     1.373 |
+|     single_vector_multiplier_generate[13].vector_multiply |     1.491 |
+|       MACC_MACRO_inst                                     |     1.337 |
+|     single_vector_multiplier_generate[14].vector_multiply |     1.658 |
+|       MACC_MACRO_inst                                     |     1.504 |
+|     single_vector_multiplier_generate[15].vector_multiply |     1.572 |
+|       MACC_MACRO_inst                                     |     1.419 |
+|     single_vector_multiplier_generate[1].vector_multiply  |     1.131 |
+|       MACC_MACRO_inst                                     |     0.993 |
+|     single_vector_multiplier_generate[2].vector_multiply  |     1.636 |
+|       MACC_MACRO_inst                                     |     1.481 |
+|     single_vector_multiplier_generate[3].vector_multiply  |     1.539 |
+|       MACC_MACRO_inst                                     |     1.378 |
+|     single_vector_multiplier_generate[4].vector_multiply  |     1.508 |
+|       MACC_MACRO_inst                                     |     1.346 |
+|     single_vector_multiplier_generate[5].vector_multiply  |     1.539 |
+|       MACC_MACRO_inst                                     |     1.395 |
+|     single_vector_multiplier_generate[6].vector_multiply  |     1.618 |
+|       MACC_MACRO_inst                                     |     1.460 |
+|     single_vector_multiplier_generate[7].vector_multiply  |     1.473 |
 |       MACC_MACRO_inst                                     |     1.335 |
-|     single_vector_multiplier_generate[5].vector_multiply  |     1.575 |
-|       MACC_MACRO_inst                                     |     1.405 |
-|     single_vector_multiplier_generate[6].vector_multiply  |     1.494 |
-|       MACC_MACRO_inst                                     |     1.343 |
-|     single_vector_multiplier_generate[7].vector_multiply  |     1.554 |
-|       MACC_MACRO_inst                                     |     1.403 |
-|     single_vector_multiplier_generate[8].vector_multiply  |     1.567 |
-|       MACC_MACRO_inst                                     |     1.402 |
-|     single_vector_multiplier_generate[9].vector_multiply  |     1.516 |
-|       MACC_MACRO_inst                                     |     1.348 |
-|   LAYER_MMSU_3                                            |     0.962 |
-|     single_vector_multiplier_generate[0].vector_multiply  |     0.052 |
-|     single_vector_multiplier_generate[10].vector_multiply |     0.061 |
-|     single_vector_multiplier_generate[11].vector_multiply |     0.057 |
-|     single_vector_multiplier_generate[12].vector_multiply |     0.053 |
-|     single_vector_multiplier_generate[13].vector_multiply |     0.066 |
-|     single_vector_multiplier_generate[14].vector_multiply |     0.056 |
-|     single_vector_multiplier_generate[15].vector_multiply |     0.070 |
-|     single_vector_multiplier_generate[1].vector_multiply  |     0.059 |
-|     single_vector_multiplier_generate[2].vector_multiply  |     0.059 |
-|     single_vector_multiplier_generate[3].vector_multiply  |     0.067 |
-|     single_vector_multiplier_generate[4].vector_multiply  |     0.056 |
-|     single_vector_multiplier_generate[5].vector_multiply  |     0.058 |
-|     single_vector_multiplier_generate[6].vector_multiply  |     0.067 |
-|     single_vector_multiplier_generate[7].vector_multiply  |     0.060 |
-|     single_vector_multiplier_generate[8].vector_multiply  |     0.064 |
+|     single_vector_multiplier_generate[8].vector_multiply  |     1.493 |
+|       MACC_MACRO_inst                                     |     1.338 |
+|     single_vector_multiplier_generate[9].vector_multiply  |     1.547 |
+|       MACC_MACRO_inst                                     |     1.383 |
+|   LAYER_MMSU_3                                            |     0.869 |
+|     single_vector_multiplier_generate[0].vector_multiply  |     0.056 |
+|     single_vector_multiplier_generate[10].vector_multiply |     0.056 |
+|     single_vector_multiplier_generate[11].vector_multiply |     0.050 |
+|     single_vector_multiplier_generate[12].vector_multiply |     0.044 |
+|     single_vector_multiplier_generate[13].vector_multiply |     0.060 |
+|     single_vector_multiplier_generate[14].vector_multiply |     0.053 |
+|     single_vector_multiplier_generate[15].vector_multiply |     0.053 |
+|     single_vector_multiplier_generate[1].vector_multiply  |     0.056 |
+|     single_vector_multiplier_generate[2].vector_multiply  |     0.053 |
+|     single_vector_multiplier_generate[3].vector_multiply  |     0.059 |
+|     single_vector_multiplier_generate[4].vector_multiply  |     0.055 |
+|     single_vector_multiplier_generate[5].vector_multiply  |     0.049 |
+|     single_vector_multiplier_generate[6].vector_multiply  |     0.056 |
+|     single_vector_multiplier_generate[7].vector_multiply  |     0.056 |
+|     single_vector_multiplier_generate[8].vector_multiply  |     0.058 |
 |     single_vector_multiplier_generate[9].vector_multiply  |     0.056 |
-|   LAYER_MMSU_5                                            |     0.172 |
-|     single_vector_multiplier_generate[0].vector_multiply  |     0.058 |
-|     single_vector_multiplier_generate[1].vector_multiply  |     0.054 |
-|     single_vector_multiplier_generate[2].vector_multiply  |     0.060 |
-|   clkctrl                                                 |     0.108 |
-|   comms                                                   |     0.349 |
+|   LAYER_MMSU_5                                            |     0.159 |
+|     single_vector_multiplier_generate[0].vector_multiply  |     0.052 |
+|     single_vector_multiplier_generate[1].vector_multiply  |     0.056 |
+|     single_vector_multiplier_generate[2].vector_multiply  |     0.051 |
+|   clkctrl                                                 |     0.105 |
+|   comms                                                   |     0.368 |
 +-----------------------------------------------------------+-----------+
 
 
