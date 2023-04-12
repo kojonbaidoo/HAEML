@@ -54,7 +54,6 @@ void spi_init();
 uint8_t spi_read_write(uint8_t value);
 
 uint8_t processing = 0;// 0 - Ready to write to FPGA; 1 - Inference is occurring; 2 - Inference result is ready
-uint8_t nn_result = 0;
 uint8_t waiting = 0; //1 - Waiting for interrupt; 0 - Not waiting for interrupt
 uint16_t ms_count = 0;
 uint16_t global_end_time;
@@ -63,6 +62,7 @@ int main(void) {
 	uint32_t start_time;
 	uint32_t end_time;
 	uint32_t inference_time;
+	uint8_t reset_counter;
 
 	__disable_irq();// Disable interrupts
 
@@ -84,33 +84,41 @@ int main(void) {
 	__enable_irq();// Enable interrupts
 	init_systick();// Initialise the SysTick timer
 	char string[10];
-	while(1){
-		sprintf(string,"%d,\n",25);
-				transmit_data(string);
+	uint8_t nn_result = 0;
+	reset_counter = 0;
 
-//		switch(processing){
-//			case 0: // Check if FPGA is performing inference
-//				start_time = SysTick->VAL;
-//				processing = 1;
-//				fpga_write(0x0201);
-//				fpga_write(0x0403);
-//				fpga_write(0x0605);
-//				break;
-//
-//			case 2: // Check if FPGA is done performing inference
-//				end_time = global_end_time;
-//				nn_result = fpga_read();
-//				inference_time = get_time_diff_ms(start_time, end_time);
-////				uart_send_byte(inference_time);
-//				processing = 0;
-//				fpga_reset();// Reset the communication module of the FPGA
-//				break;
-//
-//			default:
-//				fpga_reset();
-//				processing = 0;
-//				break;
-//		}
+	while(1){
+
+		switch(processing){
+			case 0: // Check if FPGA is performing inference
+				init_systick();
+				processing = 1;
+				start_time = SysTick->VAL;
+				fpga_write(0x0201);
+				fpga_write(0x0403);
+				fpga_write(0x0605);
+				break;
+
+			case 2: // Check if FPGA is done performing inference
+				end_time = global_end_time;
+				nn_result = fpga_read();
+				inference_time = get_time_diff_ms(start_time, end_time);
+				sprintf(string,"%d,",start_time - end_time);
+				transmit_data(string);
+				processing = 0;
+
+				fpga_reset();// Reset the communication module of the FPGA
+				break;
+
+			default:
+				reset_counter++;
+				if(reset_counter == 5){
+					fpga_reset();
+					processing = 0;
+					reset_counter = 0;
+				}
+				break;
+		}
 	}
 	return 0;
 }
@@ -138,9 +146,9 @@ void fpga_write_byte(uint8_t value){
 
 void fpga_write(uint16_t value){
 	fpga_write_byte(value);
-	delay_ms(100);
+	delay_ms(1);
 	fpga_write_byte(value >> 8);
-	delay_ms(100);
+	delay_ms(1);
 }
 
 void fpga_reset(){

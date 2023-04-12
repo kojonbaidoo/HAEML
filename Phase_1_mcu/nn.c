@@ -52,7 +52,7 @@ double L1_WEIGHTS[L1_WEIGHT_ROW][L1_WEIGHT_COL] = {
     {1.74237814237155,1.08740016279188,-1.37880773958601},
     {0.0897144360751598,0.0999463305426775,-0.2121376497116},
     {-0.155182701356012,0.143644397197579,0.361872334644592},
-    {1.95564857652032,-0.269982567647195,2.52074828831962},
+    {1.95564857652032,-0.269982567647195,2.52074828831962}
 };
 
 double L1_BIAS[L1_BIAS_COUNT] = {-0.526462055302771,
@@ -130,7 +130,43 @@ double softmax_unit(double value, double exponent_sum_of_all);
 int main(){
     // double input_values[3] = {-1733.0, 361.0, 3898.0};
     // predict(1,5,4180);
-    predict(-3,0,4172);
+    //vertical
+    predict(-472,-466,8434);
+    predict(-56,205,8490);
+    predict(211,672,8308);
+    predict(678,1364,7614);
+    predict(750,1693,6333);
+    predict(926,1722,5161);
+    predict(1050,1701,3942);
+    predict(1059,1598,2473);
+    predict(887,1396,849);
+    predict(592,1238,-583);
+    printf("\n");
+
+    //still
+    predict(4,8,4165);
+    predict(-5,6,4176);
+    predict(-1,6,4174);
+    predict(0,2,4165);
+    predict(-4,2,4171);
+    predict(-5,2,4161);
+    predict(-2,0,4160);
+    predict(-5,-1,4157);
+    predict(-4,-2,4160);
+    predict(-3,0,4173);
+    printf("\n");
+
+    //horizontal
+    predict(-68,144,3467);
+    predict(1372,833,4822);
+    predict(1336,922,5087);
+    predict(1195,673,4947);
+    predict(1013,342,4568);
+    predict(809,-20,4125);
+    predict(603,-469,3630);
+    predict(675,-731,3263);
+    predict(904,-594,3433);
+    predict(1151,-269,4038);
 }
 
 void predict(double x, double y, double z){
@@ -150,7 +186,7 @@ void predict(double x, double y, double z){
     printf("\n");
 
     Layer3(L2_OUTPUT,L3_OUTPUT);
-    for(int i = 0;i < L3_LAYER;i++){printf("%f\n",L3_OUTPUT[i]);}
+    for(int i = 0;i < L3_LAYER;i++){printf("%f\t",L3_OUTPUT[i]);}
     printf("\n");
 }
 
@@ -197,13 +233,30 @@ double relu(double value){
     }
 }
 
-void softmax(double *matrix, int elem){
-    double exponent_sum_all = 0;
-    for(int i = 0; i < elem; i++){
-        exponent_sum_all += softmax_unit(matrix[i], 1);
+// void softmax(double *matrix, int elem){
+//     double exponent_sum_all = 0;
+//     for(int i = 0; i < elem; i++){
+//         exponent_sum_all += softmax_unit(matrix[i], 1);
+//     }
+//     for(int i = 0; i < elem; i++){
+//         matrix[i] = softmax_unit(matrix[i], exponent_sum_all);
+//     }
+// }
+
+void softmax(double *matrix, int elem) {
+    double max_x = matrix[0];
+    for (int i = 1; i < elem; i++) {
+        if (matrix[i] > max_x) {
+            max_x = matrix[i];
+        }
     }
-    for(int i = 0; i < elem; i++){
-        matrix[i] = softmax_unit(matrix[i], exponent_sum_all);
+    double sum = 0;
+    for (int i = 0; i < elem; i++) {
+        matrix[i] = expf(matrix[i] - max_x);
+        sum += matrix[i];
+    }
+    for (int i = 0; i < elem; i++) {
+        matrix[i] /= sum;
     }
 }
 
