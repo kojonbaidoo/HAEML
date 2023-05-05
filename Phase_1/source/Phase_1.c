@@ -45,6 +45,7 @@ void init_UART0();
 //void TPM0_IRQHandler();
 
 void transmit_data(char *pdata);
+uint32_t get_number_of_ticks(uint32_t start_time, uint32_t end_time);
 uint32_t get_time_diff_ms(uint32_t start_time, uint32_t end_time);
 void delay_ms(uint16_t delay);
 void delay_us(uint16_t delay);
@@ -57,6 +58,7 @@ uint8_t processing = 0;// 0 - Ready to write to FPGA; 1 - Inference is occurring
 uint8_t waiting = 0; //1 - Waiting for interrupt; 0 - Not waiting for interrupt
 uint16_t ms_count = 0;
 uint16_t global_end_time;
+uint16_t systick_counter;
 
 int main(void) {
 	uint32_t start_time;
@@ -86,39 +88,51 @@ int main(void) {
 	char string[10];
 	uint8_t nn_result = 0;
 	reset_counter = 0;
+	uint32_t tick_diff;
+	uint8_t tick_overflow;
 
 	while(1){
+//		systick_counter = 0;
+//		start_time = SysTick->VAL;
+//		for(int i = 0;i < 0xFFFFF;i++);
+//		end_time = SysTick->VAL;
+//		tick_diff = get_number_of_ticks(start_time, end_time);
+//		sprintf(string,"%d,",tick_diff);
+////		sprintf(string,"%d,",systick_counter);
+//		transmit_data(string);
 
-		switch(processing){
-			case 0: // Check if FPGA is performing inference
-				init_systick();
-				processing = 1;
-				start_time = SysTick->VAL;
-				fpga_write(0x0201);
-				fpga_write(0x0403);
-				fpga_write(0x0605);
-				break;
+		 switch(processing){
+		 	case 0: // Check if FPGA is performing inference
+		 		processing = 1;
+				systick_counter = 0;
+		 		fpga_write(0x0201);
+		 		fpga_write(0x0403);
+		 		fpga_write(0x0605);
+		 		start_time = SysTick->VAL;
+		 		break;
 
-			case 2: // Check if FPGA is done performing inference
-				end_time = global_end_time;
-				nn_result = fpga_read();
-				inference_time = get_time_diff_ms(start_time, end_time);
-				sprintf(string,"%d,",start_time - end_time);
-				transmit_data(string);
-				processing = 0;
+		 	case 2: // Check if FPGA is done performing inference
+		 		end_time = global_end_time;
+		 		tick_overflow = systick_counter;
+		 		nn_result = fpga_read();
+//		 		inference_time = get_time_diff_ms(start_time, end_time);
+		 		inference_time = get_number_of_ticks(start_time, end_time);
+		 		sprintf(string,"%d,",inference_time);
+		 		transmit_data(string);
+		 		processing = 0;
 
-				fpga_reset();// Reset the communication module of the FPGA
-				break;
+		 		fpga_reset();// Reset the communication module of the FPGA
+		 		break;
 
-			default:
-				reset_counter++;
-				if(reset_counter == 5){
-					fpga_reset();
-					processing = 0;
-					reset_counter = 0;
-				}
-				break;
-		}
+		 	default:
+//		 		reset_counter++;
+//		 		if(reset_counter == 50){
+//		 			processing = 0;
+//		 			reset_counter = 0;
+//		 			fpga_reset();
+//		 		}
+		 		break;
+		 }
 	}
 	return 0;
 }
@@ -146,9 +160,9 @@ void fpga_write_byte(uint8_t value){
 
 void fpga_write(uint16_t value){
 	fpga_write_byte(value);
-	delay_ms(1);
+	delay_ms(2);
 	fpga_write_byte(value >> 8);
-	delay_ms(1);
+	delay_ms(2);
 }
 
 void fpga_reset(){
@@ -307,7 +321,9 @@ void init_interrupt(){
 void init_systick(){
 	SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk; // Enable the SysTick timer
 	SysTick->LOAD = 0xFFFFFF; // Set the reload value to the maximum value
-	SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk; // Enable the SysTick timer
+	SysTick->VAL = 0; // Clearing the current value of the timer
+//	SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk; // Enable the SysTick timer
+	SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk | SysTick_CTRL_TICKINT_Msk | SysTick_CTRL_ENABLE_Msk; // Enable the SysTick timer with the processor clock as the source, and enable the SysTick interrupt
 }
 
 void init_TPM(){
@@ -322,6 +338,10 @@ void init_TPM(){
 
 	NVIC_SetPriority(TPM0_IRQn, 3);	// Set interrupt priority
 	NVIC_EnableIRQ(TPM0_IRQn);	// Enable interrupt
+}
+
+void SysTick_Handler(void){
+	systick_counter++;
 }
 
 void PORTD_IRQHandler(void){
@@ -371,6 +391,17 @@ void transmit_data(char *pdata){
 	}
 }
 
+uint32_t get_number_of_ticks(uint32_t start_time, uint32_t end_time){
+	uint32_t tick_diff;
+	if(systick_counter > 0){
+				tick_diff = 16777216*systick_counter - end_time + start_time;
+			}
+	else{
+		tick_diff = start_time - end_time;
+	}
+	return tick_diff;
+}
+
 uint32_t get_time_diff_ms(uint32_t start_time, uint32_t end_time){
 	float clock_period_ms = 0.000208;
 	return (start_time - end_time) * clock_period_ms;
@@ -384,7 +415,7 @@ void flash_RED_LED(uint16_t delay){
 }
 
 void delay_ms(uint16_t delay){
-  uint32_t iter =(delay*1000000)/20.8;
+  uint32_t iter =(delay*1000)/20.8;
   for(uint32_t i = 0; i<iter; i++){
     __asm volatile("nop"); //Takes one clock cycle. 1 clock cycle at 48MHz is 20.8ns
   }

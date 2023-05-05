@@ -14,6 +14,10 @@
 #include <stdint.h>
 #include <math.h>
 
+#define RED_LED (18)
+#define GREEN_LED (19)
+#define BLUE_LED (1)
+
 #define INPUT_LAYER 3
 #define L1_LAYER 16
 #define L2_LAYER 16
@@ -123,14 +127,46 @@ void softmax(double *matrix, int elem);
 double softmax_unit(double value, double exponent_sum_of_all);
 
 void init_systick();
+uint32_t get_number_of_ticks(uint32_t start_time, uint32_t end_time);
 void init_clock();
+void init_LED();
 void transmit_data(char *pdata);
 void init_UART0();
 
+uint16_t global_end_time;
+uint16_t systick_counter;
+
 int main(void) {
+    uint32_t start_time;
+	uint32_t end_time;
+	uint32_t inference_time;
+	uint8_t tick_overflow;
 
+	__disable_irq();// Disable interrupts
+
+	init_clock(); // Set system clock to 48MHz
+
+	PTD->PSOR |= 1 << 5;// For Testing purposes
+
+	init_UART0();// Initialise UART
+	init_LED();// Initialise the on-board RED RED_LED
+
+	__enable_irq();// Enable interrupts
+	init_systick();// Initialise the SysTick timer
+
+	char string[10];
     while(1) {
+        systick_counter = 0;
+        start_time = SysTick->VAL;
 
+        predict(-857,444,3402); //Horizontal
+        end_time = SysTick->VAL;
+
+		tick_overflow = systick_counter;
+		inference_time = get_number_of_ticks(start_time, end_time);
+
+		sprintf(string,"%d,",inference_time);
+		transmit_data(string);
     }
     return 0 ;
 }
@@ -141,6 +177,19 @@ void init_clock(){
 
 	MCG->C4 |= (1 << 5);// Setting mid range as the frequency range for FLL output
 	MCG->C4 |= (1 << 7);// Important for setting frequency to 48MHz
+}
+
+void init_LED(){
+	SIM->SCGC5 |= SIM_SCGC5_PORTB_MASK;
+	PORTB->PCR[RED_LED] &= ~PORT_PCR_MUX_MASK;
+	PORTB->PCR[RED_LED]	|= (1 << 8);
+	PTB->PDDR |= (1 << RED_LED); //RED_LED
+	PTB->PSOR |= (1 << RED_LED);
+
+	PORTB->PCR[GREEN_LED] &= ~PORT_PCR_MUX_MASK;
+	PORTB->PCR[GREEN_LED]	|= (1 << 8);
+	PTB->PDDR |= (1 << GREEN_LED); //GREEN_LED
+	PTB->PSOR |= (1 << GREEN_LED);
 }
 
 void init_UART0(){
@@ -177,12 +226,6 @@ void init_UART0(){
 	NVIC_EnableIRQ(UART0_IRQn);
 }
 
-void init_systick(){
-	SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk; // Enable the SysTick timer
-	SysTick->LOAD = 0xFFFFFF; // Set the reload value to the maximum value
-	SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk; // Enable the SysTick timer
-}
-
 void transmit_data(char *pdata){
 	uint16_t i;
 
@@ -203,6 +246,29 @@ void transmit_data(char *pdata){
 	}
 }
 
+void init_systick(){
+	SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk; // Enable the SysTick timer
+	SysTick->LOAD = 0xFFFFFF; // Set the reload value to the maximum value
+	SysTick->VAL = 0; // Clearing the current value of the timer
+//	SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk; // Enable the SysTick timer
+	SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk | SysTick_CTRL_TICKINT_Msk | SysTick_CTRL_ENABLE_Msk; // Enable the SysTick timer with the processor clock as the source, and enable the SysTick interrupt
+}
+
+void SysTick_Handler(void){
+	systick_counter++;
+}
+
+uint32_t get_number_of_ticks(uint32_t start_time, uint32_t end_time){
+	uint32_t tick_diff;
+	if(systick_counter > 0){
+				tick_diff = 16777216*systick_counter - end_time + start_time;
+			}
+	else{
+		tick_diff = start_time - end_time;
+	}
+	return tick_diff;
+}
+
 // Inference functions
 void predict(double x, double y, double z){
     double input_values[3] = {x,y,z};
@@ -210,7 +276,6 @@ void predict(double x, double y, double z){
     double L1_OUTPUT[L1_LAYER];
     double L2_OUTPUT[L2_LAYER];
     double L3_OUTPUT[L3_LAYER];
-    double NN_OUTPUT[L3_LAYER];
 
     Layer1(input_values, L1_OUTPUT);
 //    for(int i = 0;i < L1_LAYER;i++){printf("%f\n",L1_OUTPUT[i]);}
@@ -232,6 +297,7 @@ void Layer1(double *input_value, double *L1_OUTPUT){
         L1_OUTPUT[i] = relu(temp);
     }
 }
+
 //Deb is the best!!!!! :)
 void Layer2(double *L1_OUTPUT, double *L2_OUTPUT){
     double temp;

@@ -129,44 +129,7 @@ double softmax_unit(double value, double exponent_sum_of_all);
 
 int main(){
     // double input_values[3] = {-1733.0, 361.0, 3898.0};
-    // predict(1,5,4180);
-    //vertical
     predict(-472,-466,8434);
-    predict(-56,205,8490);
-    predict(211,672,8308);
-    predict(678,1364,7614);
-    predict(750,1693,6333);
-    predict(926,1722,5161);
-    predict(1050,1701,3942);
-    predict(1059,1598,2473);
-    predict(887,1396,849);
-    predict(592,1238,-583);
-    printf("\n");
-
-    //still
-    predict(4,8,4165);
-    predict(-5,6,4176);
-    predict(-1,6,4174);
-    predict(0,2,4165);
-    predict(-4,2,4171);
-    predict(-5,2,4161);
-    predict(-2,0,4160);
-    predict(-5,-1,4157);
-    predict(-4,-2,4160);
-    predict(-3,0,4173);
-    printf("\n");
-
-    //horizontal
-    predict(-68,144,3467);
-    predict(1372,833,4822);
-    predict(1336,922,5087);
-    predict(1195,673,4947);
-    predict(1013,342,4568);
-    predict(809,-20,4125);
-    predict(603,-469,3630);
-    predict(675,-731,3263);
-    predict(904,-594,3433);
-    predict(1151,-269,4038);
 }
 
 void predict(double x, double y, double z){
